@@ -19,7 +19,7 @@ class PageTestCase < Test::Unit::TestCase
   def test_should_generate_page_code
     assert_equal(expected_code, @page.code)
   end
-  
+
   def test_should_give_nice_error_messages
     error = assert_raise(RuntimeError) { Page.new(1234, nil, nil) }
     assert_match(/room 1234/, error.message)
@@ -28,7 +28,7 @@ class PageTestCase < Test::Unit::TestCase
   end
 
   private
-  
+
   def expected_code
     <<-CODE
 <?php

@@ -5,7 +5,7 @@ require 'change_tracker'
 
 class ChangesOnlyCompiler
   attr_accessor :source_directory, :target_directory, :change_tracker, :room_loader
-  
+
   def initialize(source_directory, always_compile = [])
     @source_directory = source_directory
     @target_directory = "../compiled_pages/#{File.basename(source_directory).downcase}"
@@ -18,7 +18,7 @@ class ChangesOnlyCompiler
   def compile!
     affected_rooms.each do |number|
       if @room_loader.room_exists?(number)
-        puts "Compiling #{number}"
+        #puts "Compiling #{number}"
         page = Page.new(number, @room_loader, @coordinator)
         dir = number.to_i % 100
         Dir.mkdir("#{@target_directory}/#{dir}") unless File.exists?("#{@target_directory}/#{dir}")
@@ -31,23 +31,23 @@ class ChangesOnlyCompiler
     end
     @change_tracker.save_current_state!
   end
-  
+
   def affected_rooms
     affected_rooms = @change_tracker.changed_rooms.map { |room| find_affected_rooms_for(room) }.flatten
     affected_rooms << @always_compile if affected_rooms.size > 0
     affected_rooms.flatten.sort.uniq.reverse
   end
-  
+
   def find_affected_rooms_for(room)
     rooms_dependent_on[room] || [room]
   end
-  
+
   def rooms_dependent_on
     @rooms_dependencies ||= find_room_dependencies
   end
-  
+
   def find_room_dependencies
-    puts "finding all room dependencies... "
+    # puts "finding all room dependencies... "
     start = Time.now
     dependencies = {}
     lines = `cd #{@target_directory} && find 0*/*.php -print | xargs grep -H "room_number_changed"`.to_a +
@@ -63,8 +63,8 @@ class ChangesOnlyCompiler
     lines.each do |line|
       (dependencies[$2.to_i] ||= []) << $1.to_i if line =~ /(\d+)\.php:\s+\$this->receiver->room_number_changed\((\d+)\);/
     end
-    puts "done after #{Time.now - start} seconds."
+    # puts "done after #{Time.now - start} seconds."
     dependencies
   end
-  
+
 end
