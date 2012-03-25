@@ -1,0 +1,86 @@
+Er ferdig med testene i testsuiten. Det trengs flere tester.
+
+---> Compileren bør klage når den finner uregelmessigheter. For øyeblikket er det
+     en haug med feil som går rett gjennom. For eksempel [X]IKKE_ET_TALL vil bli
+     compilert til en PlainText. Den burde heller klage på at [X] krever et tall.
+
+---------------------
+Hver enkelt side er bygget opp av alle rommene den refererer til før alternativene. Poenget med
+denne kompilatoren er dette: Hver side spilleren blir presentert med skal bygges av ett
+prekompilert script. Disse scriptene skal være 100% reproduserbare og reversible (gitt en veldig
+enkel historikk, som beskrevet under).
+
+
+Uttalt mål:
+-----------
+$this->receiver skal være så dum som mulig. All funksjonalitet skal være i den genererte koden.
+Denne tanken har fordeler og ulemper:
+
+ - den genererte koden blir veldig stor med mye repetert kode
+ - gamle sider vil beholde gamle bugs (dette er faktisk en fordel, pga. historikk)
+ - lett å implementere mange forskjellige receivers, uten duplisering i "live kode"
+ - for den kompilerte koden er ikke "live" - den er en kompilering av live A00-script,
+   og da er det ingen krise at ting gjentas.
+
+
+Historikk:
+----------
+Historikken til spilleren skal være på dette formatet:
+
+   [room_number]:[page_number]:[conditionals]:[choice]
+
+Det er dette $this->receiver->conditional brukes til. Den bygger opp en oversikt
+over hva som var resultatet av hver enkelt if-statement. På den måten kan en
+nøyaktig historikk alltid gjenoppbygges, fra hvilket som helst tidspunkt.
+Den samme metoden brukes av andre receivere til å repetere tidligere hendelser.
+
+
+Rekursjon:
+----------
+Procedure-calls kan skape rekursjon.
+Det er lov å deklarere en funksjon inni en annen funksjon i PHP.
+Rom som kaller seg selv, bør deklarere seg selv som en funksjon.
+
+
+Sideoversikt: 
+-------------
+Sammen med alle side-filene, må det bygges opp en oversikt over nyeste rom->side mappings
+Denne fila blir temmelig stor, og må lastes inn hver gang. Kan det være en idé å bruke
+mappings-fila til å bygge opp en lang rekke symlinker fra rom til korresponderende sidefil?
+
+Løsningen ble en pages/ mappe som inneholder sider på formatet 1439.php .. denne fila har en
+version() som returnerer versjonnummeret. Disse ligger i pages/versions/ a.la 1439_-124857342.php,
+og dette versjonsnummeret lagres i historikken. Så når 1439 oppdateres, vil pages/1439.php også
+endres, men det vil lages en ny pages/versions/1439_xxx.php-fil. 
+
+
+Metoder som kreves av en Receiver:
+----------------------------------
+$this->receiver->write(string) : void
+$this->receiver->end_paragraph() : void
+$this->receiver->end_subpage() : void
+$this->receiver->add_alternative(text, room_number) : void
+$this->receiver->saveable() : void
+$this->receiver->add_flag(flag) : void
+$this->receiver->has_flag(flag) : bool
+$this->receiver->remove_flag(flag) : void
+$this->receiver->set_detail(flag, value) : void
+$this->receiver->add_to_detail(flag, value) : void
+$this->receiver->multiply_detail(flag, value) : void
+$this->receiver->set_to_random(flag, min, max) : void
+$this->receiver->get_detail(flag) : string
+$this->receiver->get_detail_to_display(flag) : string
+$this->receiver->room_number_changed(room_number) : void
+$this->receiver->add_deed(description, type) : void
+$this->receiver->conditional(bool) : bool
+
+For å gjøre SETTING reversibelt, må den gamle verdien taes vare på. Ettersom dette er noe
+som bare har med reversering å gjøre, viser det seg å være vanskelig i denne koden. Derfor ser
+jeg meg nødt til å flytte reversering og lagring av gamle verdier over til $receiveren. Dessverre.
+For at dette ikke skal skje så ofte (vi vil ikke ha krav-tabellen fyllt med backupkopier..), så
+legger jeg til "add". Jeg droppet "multiply", siden det skjer så utrolig sjeldent.
+
+Jeg la på "set_to_random".. implementasjonen av random vil jeg ha mulighet til å tweake, og
+er nok greiest å ta på php-siden av saken. Det skal jo slettes ikke være random, men heller
+en kraftig seedet tilfeldighetsfunksjon. Gitt samme omstendigheter skal den gi samme tall.
+

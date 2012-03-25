@@ -1,0 +1,1532 @@
+]C[HULLORKER01
+Ved siden av hullet ligger det to forkullede lik av orker. Du går nærmere og
+472020804
+Ved siden av hullet står det en enorm stein med en del størkna blod på.
+-206499030
+Ved siden av hullet ligger de oppstykka bitene av tre døde orker. De ble
+-469291701
+På bakken ved hullet ligger de to opptinede likene av orkene. De har begynt
+-2047069082,100414566
+
+]C[VÅPENKONTROLL.HB
+@11082
+123167991,-2024315657
+@9944
+-151205540,1996278108
+@9948
+-151205536,1996278112
+@11109
+131146483,-2016337165
+@16487
+2034665801
+
+]C[KJØPEAVØRKENFYR
+()SABOTASJETØNNE
+-205130311,1942353337
+()TRESPRITFLASKE
+-164624283
+()HVITLØK
+518910420,-1628573228
+@2701
+773289336
+()MORDERKNIV
+378525266,-1768958382
+
+]C[HULLORKER02
+drept her av en kar du summonet fram med skrollen din.
+296588304
+å råtne. Oppi hullet ligger det en del kjøttbiter rundt omkring. Ekkelt.
+848000608
+ser etter. Nedi hullet ligger det også et forkullet lik. Du smiler skjevt.
+-388674888
+Under den ligger de knuste kroppene etter to ganske så bøse orker.
+-131818879
+
+]C[INN_PÅ_MARKEDSPLASSEN
+@10856
+-479640357,1667843291
+@10846
+-479708006,1667775642
+@10826
+-479843304,1667640344
+
+]C[TILBAKE7026
+@6319
+-469984543
+@6309
+-470052192
+
+]C[PRESENTERTSOMLG
+"Hau, hau! Du må vere han osteinnkjøpar-karen, du. Kan eg hjelpe deg med noko?"
+352218702
+"Hau, hau! Du må vere han derre krigaren. Rett så gildt sverd du har, då."
+1811777373,-335706275
+"Herreminjemini! Du er han bestialske mordaren som skal drepe hele bygda!"
+1562828432,-584655216
+"Hau, hau! Du må vere den hardbarkade sjørøveren. Eg kjennar saltlukta, ja!"
+1282390560,-865093088
+"Hau, hau! Du må vere han derre trollkaren, du."
+-166800548
+"Hei, framandkar, deg har eg ikkje sedd føyr. Kva er du før ein fyr, då?"
+-1691017040,456466608
+"Hau, hau! Du må vere han derre rett så kloke fyren ved hoffet, du."
+1357647043,-789836605
+"Hau, hau! Du må vere han derre mestertyven som kjem fra nedanfor fjella, du."
+-1854324233,293159415
+
+]C[GI_URTE
+$URTE:DYVELSKREK++
+165126258
+()FIKK-INGEFÆR
+192487274,-1954996374
+$URTE:BEKMYRT++
+38307303,-2109176345
+FIKK-INGEFÆR
+370327905
+$URTE:SORTENKE++
+-490807704
+$URTE:EINERGRESS++
+526593223,-1620890425
+()FIKK-KANEL
+-165325657,1982157991
+FIKK-KANEL
+-142131606
+()FIKK-KARDEMOMME
+828115281
+$URTE:BUKKEHORNKLØVER++
+-127151772
+FIKK-KARDEMOMME
+551161924
+$URTE:GROMGRAS++
+939032176,-1208451472
+()FIKK-NELLIK
+-130764049
+$URTE:TANNISROT++
+-238363893
+FIKK-NELLIK
+-384814614
+$URTE:MÅNEBLOM++
+755174153,-1392309495
+$URTE:ULVETUNGE++
+653133952,-1494349696
+$URTE:GULLSKIMMER++
+-668682459,1478801189
+$URTE:MUGGMOSE++
+930557137
+
+]C[KUTTATAUSTIGEN
+Du kan se at orkene har hengt opp en ny taustige. Du kappa jo den gamle.
+-999983909
+
+]C[KATTUNGEN
+Brått ser du det komme en liten kattunge ut av et smug. Den mjauer søtt.
+1752127534,-395356114
+
+]C[ØRKENDEST
+@6663
+-444087274
+@6665
+-444087272
+@6668
+-444087268
+@6670
+-444019628
+@6661
+-444087276
+@6671
+-444019627
+@6669
+-444087267
+
+]C[LENNARTS-OPPSLAGSTAVLE
+"Erfaren smed og murer ønskes for sikring av byens tre brønner." "Drømmetydning for folk flest, spør etter Elna." "Stort tørt håndkle ønskes kjøpt." "Byvakten  ønsker vitneutsagn i forbindelse med et voldsomt drønn i nærheten av            Skipperkroa." "Krystallklart, renset, rensende kildevann på flasker selges på   markedsplassen. Begrenset opplag. Kjøp nå!"
+201903418
+"Kjeller leies ut til høystbydende, oppussingsobjekt. Riktig mye rengjøring må  medregnes." "Lykkeridderens Leverandør har fått inn ekstra lanterner og flasker med olje, så nå er det nok til alle. Kom innom før du tar turen til lysfattige  fangehull og mørke ganger."
+1889191531,-258292117
+"Overkonstabel for Fotgjengere, Ryttere og Vognførere oppfordrer allmenheten tilforsiktighet i Høyborgs gater." "Skakkkjørt vogn uten hest selges. Opphugging   til pinneved skjer ved kjøpers egen regning." "Bøtte på bøtte med lim selges på markedsplassen, spør etter herr Karlson."
+2021958104,-125525544
+"Eier av svart katt ettersøkes." "Omreisende teater søker ny trapêsartist."     "Speil selges - oppussingsobjekt." "Kjemiker søkes for fjerning av maling fra   dress. Kan betale i kongerupi eller ett stykk stige." "Har du sett Pussi? Hun   forsvant fra vårt hjem klokken tretten fredag i forrige uke."
+-1750338146,397145502
+Med en viss overraskelse observerer du at oppslagstavlen er borte. En hvit      firkant i malingen er det eneste som er igjen. Det, og en liten påteipet lapp.  "Ny oppslagstavle er bestilt. Den gamle var neddynket av klumpete magesyre.     -Lennart"
+-1541809093,605674555
+"En haug med forkullede rester av falleferdige hus ønskes solgt, eller byttet i tipi." "Emba og Kamuf Larsen søker kost og losji hos romslig velgjører." "Aske  etter nedbrent vindmølle byttes i velholdt pappeske." "Skrammel og skrot ønskes solgt for en slikk, eller ingenting."
+760476879
+"Trivelig ung mann med vogn full av Vipafrukt ønsker jobb." "Skrammel selges tilhøyestbydende på markedsplassen. Noe kruttslam må medregnes." "Viktig meddelelsefra Kloakkansvarlig Turgelsen: Det er ikke under noen omstendighet lov for den  gemene hop å bevege seg i Høyborgs kloakk. Det er ingen eventyr å finne, kun    slam, slum og slim."
+958008845
+"Hevn ønskes, fortrinnsvis kald." "Er du en dreven forsvarsspiller i dengeball? Ta kontakt med Egil." "Navnet på de involverte selges. Sonny." "Når du svever   mellom død og liv, bruk healingsskroll fra din vennlige antikvitetsforhandler i Svarthaug." "Dirigent ønskes til djevelens orkester." "Om folk vennligst kan    slutte å snike i køen til depotet. Takk."
+2124859231,-22624417
+"Overkonstabel for Fotgjengere, Ryttere og Vognførere oppfordrer allmenheten tilforsiktighet i Høyborgs gater." "Skakkjørt vogn uten hest selges. Opphugging tilpinneved skjer ved kjøpers egen regning." "Bøtte på bøtte med lim selges på     markedsplassen, spør etter herr Karlson."
+204030774
+"Ønsker hjertelig til lykke med dagen til Alma og Ask. Tilbud på medium         størrelse urtetasker hos Plantepasseren i den nye parken. Salt kjeks ønskes     kjøpt. Har du sett vår søte kattunge? Han forsvant for oss i skogen. Svarer på  navnet sitt: Leviathan."
+-1532210388
+"Problemer med padder? Stian er din lokale skadedyrsaniteringspartner. Froskelårønskes ikke kjøpt. Vaskedame ønskes til daglig renhold. Skjønner du ikke et     kvekk? Kom til Spådame Elna for din framtid spådd - garantert ingen padder!"
+-187949040
+"Problemer med padder? Stian er din lokale skadedyrsaniteringspartner. Froskelår ønskes ikke kjøpt. Vaskedame ønskes til daglig renhold. Skjønner du ikke et     kvekk? Kom til Spådame Elna for din framtid spådd - garantert ingen padder!"
+520653570
+"Ønsker hjertelig til lykke med dagen til Alma og Ask. Tilbud på medium          størrelse urtetasker hos Plantepasseren i den nye parken. Salt kjeks ønskes     kjøpt. Har du sett vår søte kattunge? Han forsvant for oss i skogen. Svarer på  navnet sitt: Leviathan."
+-1766218318
+"Erfaren smed og murer ønskes for sikring av byens tre brønner." "Drømmetydning  for folk flest, spør etter Elna." "Stort tørt håndkle ønskes kjøpt." "Byvakten  ønsker vitneutsagn i forbindelse med et voldsomt drønn i nærheten av            Skipperkroa." "Krystallklart, renset, rensende kildevann på flasker selges på   markedsplassen. Begrenset opplag. Kjøp nå!"
+-263159209
+"Trivelig ung mann med vogn full av Vipafrukt ønsker jobb." "Skrammel selges til høyestbydende på markedsplassen. Noe kruttslam må medregnes." "Viktig           meddelelse fra Kloakkansvarlig Turgelsen: Det er ikke under noen omstendighet   lov for den gemene hop å bevege seg i Høyborgs kloakk. Det er ingen eventyr å   finne, kun slam, slum og slim."
+-630576658
+Med en viss overraskelse observerer du at oppslagstavlen er borte. En hvit       firkant i malingen er det eneste som er igjen. Det, og en liten påteipet lapp.  "Ny oppslagstavle er bestilt. Den gamle var neddynket av klumpete magesyre.     -Lennart"
+-1613992280
+"Hevn ønskes, fortrinnsvis kald." "Er du en dreven forsvarsspiller i dengeball?  Ta kontakt med Egil." "Navnet på de involverte selges. Sonny." "Når du svever   mellom død og liv, bruk healingsskroll fra din vennlige antikvitetsforhandler i Svarthaug." "Dirigent ønskes til djevelens orkester." "Om folk vennligst kan    slutte å snike i køen til depotet. Takk."
+151236607
+"En haug med forkullede rester av falleferdige hus ønskes solgt, eller byttet i  tipi." "Emba og Kamuf Larsen søker kost og losji hos romslig velgjører." "Aske  etter nedbrent vindmølle byttes i velholdt pappeske." "Skrammel og skrot ønskes solgt for en slikk, eller ingenting."
+-1491340994
+"Eier av svart katt ettersøkes." "Omreisende teater søker ny trapêsartist."      "Speil selges - oppussingsobjekt." "Kjemiker søkes for fjerning av maling fra   dress. Kan betale i kongerupi eller ett stykk stige." "Har du sett Pussi? Hun   forsvant fra vårt hjem klokken tretten fredag i forrige uke."
+-1191644591
+"Overkonstabel for Fotgjengere, Ryttere og Vognførere oppfordrer allmennheten    til forsiktighet i Høyborgs gater." "Skakkjørt vogn uten hest selges.           Opphugging til pinneved skjer ved kjøpers egen regning." "Bøtte på bøtte med    lim selges på markedsplassen, spør etter herr Karlson."
+1648371289
+"Kjeller leies ut til høystbydende, oppussingsobjekt. Riktig mye rengjøring må   medregnes." "Lykkeridderens Leverandør har fått inn ekstra lanterner og flasker med olje, så nå er det nok til alle. Kom innom før du tar turen til lysfattige  fangehull og mørke ganger."
+-1825515678
+
+]C[HELVETEFOLK1
+Rett foran deg i køen står de to vaktene du nettopp drepte. De ser forvirret    rundt seg. Den ene har et stygt sår i ansiktet, den andre henger slapt med      skulderen. Du smiler skjevt.
+-10748949
+Rett foran deg i køen står de to lattermilde piratene du tok livet av.
+1875589298,-271894350
+Foran deg i køa ser du sjørøveren du drepte. Han snerrer mot deg.
+1030221902
+
+]C[SKJELETTRESTER
+Det ligger noen skjelettbein på gulvet, enkelte av dem knust.
+913940422,-1233543226
+Det ligger noen godt stekte skjelettbein hulter til bulter på gulvet.
+-442916522
+
+]C[FISKERDRAUME
+Ved kanten av vannet står en kar med stor grønn hatt og fisker. Draume?
+-2983907
+Du sniker deg stille ut.
+1970921284,-176562364
+
+]C[HOPP_ETTER_KALENDERGAVE
+@13059
+-414557499
+@13159
+-406037822
+@13082
+-414354559
+@13138
+-406173121
+@13127
+-406240771
+@13072
+-414422208
+@13162
+-405970180
+@13129
+-406240769
+@13074
+-414422206
+@13130
+-406173129
+@13119
+-406308418
+@13086
+-414354555
+@13164
+-405970178
+@13131
+-406173128
+@13120
+-406240778
+@13132
+-406173127
+@13110
+-406308427
+@13121
+-406240777
+@13077
+-414422203
+@13056
+-414557502
+@13134
+-406173125
+@13079
+-414422201
+@13168
+-405970174
+@13157
+-406037824
+{@}9309
+302026686
+@18320
+-793483703
+@18321
+-793483702
+
+]C[GJENNOM_FOLKSOM_GATE
+@9966
+1996413408,-151070240
+@10865
+1667910939,-479572709
+
+]C[ORKERDREPTTÅRN01
+elendige orkene. Likene av orkene ligger spredt rundt det ødelagte vakttårnet
+-307062000
+orkene med steinskrollen din. Det lukter egentlig ganske ille her. Likene til
+-1668381823,479101825
+orkene. To av dem ihvertfall. Også ødela du vakttårnet dems. Men så feka du
+-1082142069,1065341579
+tåpelige orkene. Toppen av treet vakttårnet var er sprengt i fillebiter, og
+-1996452648,151031000
+elendige orkene. Likene av orkene ligger spredt rundt det ødelagte              vakttårnet
+1057230004
+
+]C[VAMPYRSEIER
+Vampyren bryter ut av den skrekkelige angsten og slår bibelen fra dine hender.
+-394579156,1752904492
+Med stor innsats tar vampyren tak rundt hvitløken og røsker den av seg.
+-568664879
+Vampyren overvinner sin angst for korset, farer mot deg og slår det til siden.
+606607340,-1540876308
+
+]C[ØRKENGÅING6675
+{@}6816
+77234718,-2070248930
+{@}6794
+69256231,-2078227417
+{@}6662
+60533605,-2086950043
+{@}6795
+69256232,-2078227416
+{@}6663
+60533606,-2086950042
+{@}6817
+77234720,-2070248928
+{@}6796
+69256233,-2078227415
+{@}6664
+60533607,-2086950041
+{@}6818
+77234721,-2070248927
+{@}6797
+69256234,-2078227414
+{@}6665
+60533608,-2086950040
+{@}5884
+-593054562,1554429086
+{@}6819
+77234722,-2070248926
+{@}6666
+60533609,-2086950039
+{@}6402
+43088357,-2104395291
+{@}6810
+77234712,-2070248936
+{@}6809
+77167073,-2070316575
+{@}6799
+69256236,-2078227412
+{@}6667
+60533610,-2086950038
+{@}6811
+77234713,-2070248935
+{@}6800
+77167063,-2070316585
+{@}6789
+69188587,-2078295061
+{@}6668
+60533611,-2086950037
+{@}6360
+34974572,-2112509076
+{@}5381
+-635652950,1511830698
+{@}6812
+77234714,-2070248934
+{@}6801
+77167064,-2070316584
+{@}6790
+69256227,-2078227421
+{@}6669
+60533612,-2086950036
+{@}5723
+-601980134,1545503514
+{@}6813
+77234715,-2070248933
+{@}6670
+60601252,-2086882396
+{@}6814
+77234716,-2070248932
+{@}6792
+69256229,-2078227419
+{@}6671
+60601253,-2086882395
+{@}6815
+77234717,-2070248931
+{@}6793
+69256230,-2078227418
+{@}6661
+60533604,-2086950044
+{@}4342
+706579554
+
+]C[DRAGENDOEDUTENFOR01
+Utenfor hula ligger dragens hodeløse, råtnende lik. Det surrer fluer rundt
+1882268995,-265214653
+Utenfor hulen ligger den døde dragen og råtner i solsteken.
+444275311
+Utenfor hula ligger dragen. Hodet ligger knust under en enorm stein, og
+-1994356139,153127509
+Utenfor hula ligger det råtnende liket av dragen Magnus. Det er en veldig
+1553985485,-593498163
+
+]C[ORKERDREPTTÅRN02
+og råtner. Det surrer fluer rundt dem og det lukter egentlig ganske vondt.
+853875586
+det til. Hvorfor ikke drepe den våkne orken først, og SÅ lete etter ting?
+-890588336
+orkene ligger vel fortsatt knust utover i det lille tårnet oppe i treet.
+1630261041,-517222607
+biter av orkene ligger rundt og råtner. Ikke et deilig syn akkurat.
+1138465132,-1009018516
+det til. Hvorfor ikke bry deg mer om den våkne orken enn den besvimte?
+2111696613,-35787035
+
+]C[FJERN_KALENDERGAVE
+#13163
+-391240007,1756243641
+#13141
+-391375307,1756108341
+#13064
+-399759683,1747723965
+#13053
+-399827333,1747656315
+#13076
+-399692032,1747791616
+#13165
+-391240005,1756243643
+#13055
+-399827331,1747656317
+#13155
+-391307654,1756175994
+#13133
+-391442954,1756040694
+#13122
+-391510604,1755973044
+#13123
+-391510603,1755973045
+#13124
+-391510602,1755973046
+#13080
+-399624389,1747859259
+#13069
+-399759678,1747723970
+#13136
+-391442951,1756040697
+#13137
+-391442950,1756040698
+#13126
+-391510600,1755973048
+#13160
+-391240010,1756243638
+#13116
+-391578249,1755905399
+#2973
+-3295739,2144187909
+#13128
+-391510598,1755973050
+#13073
+-399692035,1747791613
+#13085
+-399624384,1747859264
+#18314
+1368662472
+
+]C[GI_URTE_HOPP
+{@}4738
+740590620
+{@}13066
+360779683
+@5565
+889896150,-1257587498
+{@}12787
+-384427828
+{@}12622
+-393353404
+{@}12623
+-393353403
+{@}4510
+-435702896
+{@}459
+-139522286,2007961362
+{@}10063
+93321681,-2054161967
+{@}1451
+447708880,-1699774768
+{@}4346
+706579558
+@3994
+-551565565,1595918083
+{@}275
+-156426347,1991057301
+@976
+1005360833,-1142122815
+{@}12636
+-393285750
+{@}10889
+161614402,-1985869246
+{@}1090
+413900767,-1733582881
+{@}6370
+35042221,-2112441427
+{@}750
+-113963265,2033520383
+{@}7229
+831164857,-1316318791
+{@}178
+-164946021,1982537627
+{@}7064
+814396094,-1333087554
+{@}3993
+-46944687
+{@}135
+-165216620,1982267028
+{@}5778
+-601641884,1545841764
+{@}13066
+-886071589
+{@}9081
+277008839
+{@}2323
+-903516841
+{@}345
+-148109617,1999374031
+{@}12652
+-393150457
+{@}2598
+-886003939
+@4045
+42181918,-2105301730
+{@}1907
+489969027,-1657514621
+@13058
+-414557500
+@421
+962424198,-1185059450
+{@}14582
+1208493911
+{@}14647
+1216742997
+{@}14613
+1216540046
+{@}14580
+1208493909
+{@}14645
+1216742995
+{@}14608
+1216472403
+{@}14696
+1217081241
+{@}14648
+1216742998
+{@}14662
+1216878290
+{@}3212
+-107123619
+{@}16230
+-1636627293
+{@}16217
+-1636762584
+{@}16231
+-1636627292
+{@}16229
+-1636694933
+{@}8560
+-485508624
+{@}16226
+-1636694936
+
+]C[GGGSALG
+)(GULLARMBÅND
+790958531
+)(MAGISKRING
+-64587173,2082896475
+)(GREVEAMULETT
+38818782
+)(LITENDIAMANT
+-912083019
+)(SPESIELLRING
+-594986711
+)(LITENSAFIR
+-295692738
+)(PRINSMILDSKRONE
+-816986698,1330496950
+)(ZOMBIEGULLRING
+675130934,-1472352714
+)(LITENRUBIN
+-840374864,1307108784
+)(GYLDENTDRIKKEBEGER
+989166227
+)(BROSJE
+252276370,-1895207278
+)(PERLEKJEDE
+904877211,-1242606437
+)(GULLØYEEPLE
+728051034
+)(LITENSMARAGD
+367119542,-1780364106
+)(DIAMANTBESATTGULLRING
+-1016366433
+)(VAKKERGULLRING
+649889976
+)(LITENGULLKLUMP
+-634928871,1512554777
+)(SØLVBEGER
+-828061118,1319422530
+)(SØLVSIGD
+1543860225
+)(STORRUBIN
+-1697186369
+)(STORSAFIR
+1129197132
+)(STORSMARAGD
+77524045
+
+]C[VIDERE_DIAMETRALSK
+@9976
+1996481056,-151002592
+@9934
+1996210459,-151273189
+@10857
+1667843292,-479640356
+@10846
+1667775642,-479708006
+@10813
+1667572692,-479910956
+@10858
+1667843293,-479640355
+@10847
+1667775643,-479708005
+@10837
+1667707994,-479775654
+@10826
+1667640344,-479843304
+@10838
+1667707995,-479775653
+@10827
+1667640345,-479843303
+
+]C[TABORTHJELM
+)(HORNHJELM
+-541084762
+)(ROSEMØNSTERHJELM
+-901164962
+
+]C[FÅTILBAKEBANANBUTIKK
+()LITENDIAMANT
+645591365
+()LITENSMARAGD
+-222689722
+()PRINSMILDSKRONE
+-2018630350,128853298
+()SØLVBEGER
+-1561465125,586018523
+()MAGISKRING
+-663773453
+()KJEMPEPERLE
+675556159
+()GULLARMBÅND
+-2080552109,66931539
+()DIAMANTBESATTGULLRING
+28717363
+()LITENSAFIR
+1252604630,-894879018
+()VAKKERGULLRING
+-403121344
+()PERLEKJEDE
+305690931
+()LITENRUBIN
+-1573778872,573704776
+()ZOMBIEGULLRING
+1903820990,-243662658
+()GYLDENTDRIKKEBEGER
+678497035
+()LITENGULLKLUMP
+459543457
+
+]C[DRAGENDOEDUTENFOR02
+kroppen har begynt å råtne. Det myldrer av fluer.
+-666136331
+kroppen, deler av hodet ligger spredt rundt, eller splattet oppover veggen.
+823170639
+rift i magen, og han har begynt å råtne. Fluer surrer rundt liket.
+721464398
+
+]C[HOPP_ETTER_MANGLENDE_LANTERNE
+{@}8795
+-468266318
+{@}8604
+-477394837
+
+]C[UT_FRA_MARKEDSSENTERET
+@10828
+1667640346,-479843302
+@10858
+1667843293,-479640355
+@10848
+1667775644,-479708004
+@10838
+1667707995,-479775653
+
+]C[GGGPRIS
+kr.25
+876801067
+kr.70
+877139307
+kr.50
+877004009
+kr.30
+876868711
+kr.20
+876801062
+kr.10
+876733413
+kr.90
+877274604
+kr.45
+876936365
+kr.80
+877206955
+kr.35
+876868716
+kr.150
+-132026659
+
+]C[ØRKENGÅING
+@6696
+-443884324
+@4938
+-2028692282,118791366
+@676
+-1167681846,979801802
+@1782
+-31150020
+@15
+548574184
+@427
+-1185059444,962424204
+@1168
+-82403374
+@4899
+-2036806064,110677584
+@155
+-1210415530,937068118
+@16212
+2017152899
+@16210
+2017152897
+@16208
+2017085256
+
+]C[HULLIVEGGFIKSET
+Du sjekker muren. Det ser ut til at noen har tettet igjen hullet du gravde.
+-991780430
+Du sjekker muren, og det ser ut til at noen har fikset hullet du sprengte.
+488223213
+
+]C[GI_URTE_TEKST
+@6762
+-435567598
+Du røsker med deg hele bunten av gyldent gress og legger i urtetaska.
+437339683,-1710143965
+Du river til deg en tust med gromgraset og legger det i urtetaska.
+201420648
+Du legger barkrullen forsiktig i taska.
+202541482,-1944942166
+Du løsner dyvelskreken fra jordsmonnet, børster rota for jord, og legger den    forsiktig i urtetaska.
+115639078,-2031844570
+Du rasker til deg så mye gromgras som du kan, og legger det i urtetaska.
+-965541382,1181942266
+Forsiktig plukker du gullskimmeren og legger den i din urtetaske.
+-48627824,2098855824
+Du plukker gullskimmeren forsiktig, beundrer dens vakre kronblader og legger deni urtetasken.
+-35257277,2112226371
+Du slenger rota opp i urtetaska og grøsser.
+162222468
+Du legger planten varsomt ned i urtetaska.
+797269958
+Du plukker planten nennsomt og legger den på plass i urtetaska.
+325182651,-1822300997
+Du røsker det opp med rota og legger det i urtetaska.
+-96772710,2050710938
+Du røsker til deg det du finner og legger det i urtetaska.
+-770505935
+Du legger gresset på plass i din urtetaske.
+-119512284
+Du legger rota forsiktig i taska.
+571191239
+Du røsker til deg det som er av gromgras ved brønnen og stapper det i urtetaska.
+-66004070,2081479578
+Forsiktig plukker du blomsten. Et svosj kan høres i det noe av den svarte       intensiteten i blomsten forsvinner. Det er som om den slipper taket på lyset    rundt seg. Du legger den i urtetasken.
+990144927
+Forsiktig finner du en plass til planten i urtetasken.
+-633553987,1513929661
+Du røsker den til deg, og kommer deg vekk fra kanten i en fei. Så plasserer du  urten pent på plass i taska.
+212549703
+Du røsker til deg gromgraset og legger det i urtetaska.
+1072506429
+Du plukker med deg alt det du kan, og legger det på plass i urtetaska.
+-559663246
+Du slenger rota opp i urtetaska og rynker på nesa.
+-232526843
+Du røsker til deg det som er av gromgras ved foten av tårnet, og legger det i   urtetaska.
+545539028
+Du legger blomsterknoppene forsiktig i taska.
+275017596
+Du legger frøkapslene forsiktig i taska.
+-434800297
+Du river opp alt gromgraset med rota. Det skimrer fint når du legger det fint påplass i urtetaska.
+-531877065
+Du plasserer den stinkende rota i urtetaska med en rynket mine.
+-669001010,1478482638
+Du redder så mye av graset som du kan, og legger det pent i urtetaska.
+-637040740
+Du røsker den til deg, reiser deg opp med skjelvende bein. Så legger du urten   pent på plass i taska.
+-218603060,1928880588
+Du legger blomsten forsiktig på plass i urtetaska.
+373888282,-1773595366
+Du røsker til deg det som er av gromgras ved foten av tårnet, og legger det i uretaska.
+789318159
+Du legger muggmosen forsiktig på plass i urtetaska og rynker på nesa.
+-1190195970
+Du legger bekmyrten forsiktig på plass i urtetaska.
+31259223
+
+]C[UT_FRA_MARKEDSPLASSEN
+@10813
+1667572692,-479910956
+@9940
+1996278103,-151205545
+@9941
+1996278104,-151205544
+
+]C[PARISERVELTET
+@1044
+-91058354
+@3912
+-552106759,1595376889
+@3913
+-552106758,1595376890
+
+]C[_EVIL_DEED
+"Dessuten så han bare på mens en av dine prester ble drept av min imp."
+-39389102,2108094546
+"Det første han gjorde var å drepe vakta bare fordi han gjorde jobben sin!"
+-1879205921,268277727
+"Ha-ha! Han maltrakterte et uskyldig lite barn i Veslegrend." ler Satan rått.
+820882646
+"Han angrep en prest og tre enker under en begravelse utenfor Høyborg."
+-686399979
+"Han banket opp og sparket istykker huset til den fylliken på brygga."
+-1078894225,1068589423
+"Han bare så på mens banansoldatene skambanket en dverg," sier satan.
+-659198808
+"Han brant ned fire hus i Dødens Dal, og drepte tre av dem som bodde der."
+-292444542
+"Han brukte den onde sorte amuletten, et grufullt våpen, mot andre mennesker."
+-1465248374,682235274
+"Han drepte den stakkars nybegynneren som vaktene hadde tatt til fange, og det   på en særdeles grim måte" smiler Satan og gnir seg fornøyd i hendene.
+-136549231
+"Han drepte den vakre, uskyldige møyen i Veslegrend" sier Satan sleskt.
+-1901931385,245552263
+"Han drepte ei fattig jente og tok pengene hennes, på den nedbrente gården."
+573373008
+"Han drepte jo de tre bevisstløse banansoldatene, sann ondskap!"
+-1469365610,678118038
+"Han drepte jo vakta i Dypvann, bare fordi han blandet seg inn" sier satan.
+493737103
+"Han drepte mange munker og plyndret tempelet deres."
+-947255954
+"Han drepte tre barn som lekte sisten. Og moren dems etterpå," gliser Satan.
+-67701084
+"Han druknet den uskyldige arbeidskaren i kloakk! I KLOAKK!" sier satan.
+-2106046199,41437449
+"Han forgiftet maten i orkefengselet, og gadd ikke si ifra til fangene."
+914625681
+"Han forvandlet jo alle de "uskyldige" bankfolka til rare vesner da, hehe!"
+-1500657876,646825772
+"Han hadde planer om å hjelpe skurken i sidegata i Dypvann." sier satan.
+641231903
+"Han holdt jo et rituale til ære for meg i den skumle skogen."
+417626612
+"Han jaget den fattige familien fra sandhulene de hadde jobbet så mye med."
+601774310
+"Han jaget den fattige familien fra sandhulene til en uviss skjebne i ørkenen."
+-1615837735,531645913
+"Han kvesta en nykristen jypling som ba for sitt liv på gravplassen i skogen."
+-401453682
+"Han la ut om Lennart sin hemmelige oppskrift til hans argeste konkurrent."
+-958166351,-929018199
+"Han leverte fordervet gromgras til Lennart, med masseoppkast og elendighet som resultat."
+1044359164
+"Han lot den vakta blø ihjel i smuget i Dypvann også!" sier satan stolt.
+-241111582
+"Han plyndret og drepte en gjeng imbesiler ombord på en brigg utenfor Dypvann!"
+-416508958
+"Han robbet konas perlekjede fra den sørgende enkemannen på brygga i Høyborg."
+-199665051
+"Han slakta jo ned de tre snille bøndene på torpofarmen, hehe!"
+34185460
+"Han slapp jo den hjelpeløse ballongmannen rett i døden, uten grunn,hehe."
+-1213534466,933949182
+"Han slapp jo ut impen i kjelleren på kapellet da."
+36236400
+"Han slapp løs de siste, sorte kamelene til de omreisende handelsmennene!"
+-271870129,1875613519
+"Han solgte en flaske med tresprit til en stakkars uteligger," sier satan.
+-767333694,1380149954
+"Han sparka til en stakkarslig fyr som lå på gulvet under et barslagsmål."
+-910692411
+"Han sparket et forsvarsløst pinnsvin" sier djevelen stolt.
+-1784711884,362771764
+"Han stakk sverdet i magen på Margot etter at hun hadde helbredet ham!"
+517216209
+"Han stjal alle rupiene til den uskyldige unge seileren på Skipperkroa," sier   satan.
+355398399
+"Han stod bare og så på mens kannibalene spiste den stakkars, unge piken."
+-81656514
+"Han torturerte den stygge gnomen på Friesland." flirer Satan ondt.
+-649439408
+"Han tråkket med vilje på brillene til den stakkars skribenten," sier satan.
+-172249469,1975234179
+"Han utøver blind vold mot hyggelige, joviale og uskyldige gullgravere."
+-1189979433,957504215
+"Han var med på å utslette den stakkars, fattige familien i ørkenen."
+567810623
+"Helt uprovosert drepte han en forsvarsløs negerskipper."
+-238563317,1908920331
+"Husk! Han slapp løs den onde, onde heksa fra stubben!" sier satan.
+24262939
+"I Veslegrend drepte han tre uskyldige barn og moren deres," gliser Satan.
+-806090698,1341392950
+"Men han brant ei uskyldig dame som heks uten annen grunn enn et myntkast."
+-797655887,1349827761
+"Og etterpå kappet han Margot opp i småbiter og lo av det", Sier Satan.
+-84355973,2063127675
+"Og han kastet den hjelpeløse kattungen hardt i ruta til Vidar", sier Satan.
+823305844
+"Og så SLO han den ene ungen!" sier satan. Gud rister oppgitt på hodet.
+166050364
+"Også drepte han den greie karen i ørkenbyen, etter å ha lovt å ligge unna."
+-660831382
+"Også drepte han den uskyldige spåkona i tyvbyen." smiler satan.
+-614396905,1533086743
+"Også drepte han en helt uskyldig vaskedame!" sier satan, nesten litt stolt.
+-1410342537,737141111
+"Også drepte han en vakt i Dypvann, bare fordi han gjorde jobben sin."
+-1608194815,539288833
+"Også drepte han mora til ungen han slo!" sier satan, og ler enda mer.
+-1011727528
+"Også hev han den søte kattungen til de slemme cerberusene!" sier satan.
+-156784035,1990699613
+"Også hev han en søt, liten kattunge til to slemme rotweilere!" sier satan.
+-223488203
+"Også drepte han både kone og barn i kaldt blod! De var helt forsvarsløse."
+444209964
+"Også kasta han den søte kattungen til to sinte rottweilere!" ler satan.
+-644228320
+"Også stjal han de ungenes kattunge i Dypvann! De var skikkelig lei seg!"
+581874258
+"Og når han fant borgermesterens datter, så ofret han henne til lavaguden!"
+-530254235
+"Så kasta han den søte kattungen til to sinte rottweilere!" ler satan ondt.
+-309002055,1838481593
+"Uten skrupler hjalp han en ond demon å finne den siste kullsteinen."
+-455357346,1692126302
+"Også drepte han Lars i smultringboden i Dypvann," sier satan. Gud nikker.
+906710001
+Med et smil sier Satan "Han banket opp en fiskestang-selger helt uten grunn."
+693087547
+Satan smiler og sier: "Men han drepte stakkars Grind-Gunnar i Veslegrend."
+-1626735117,520748531
+"Han hadde planer om å hjelpe skurken i sidegata i Dypvann." sier satan.
+2076572633
+"Han lo og husket i vei, mens den lille gutten bare gråt og gråt," sier Satan.
+-1378279001
+Markedsplass-hendelser:
+-1574507778
+"Du dunker borti en fyr med et uhell" av Ylva
+-568307426
+"En kar knuser glasset ditt med vilje." av Ylva
+311993764
+"Vår helt blir luftens baron" av Lord Rahl
+109909536
+"Vår helt i en knipe" av Lord Rahl
+-293567106
+"Utfordringern" av Jøran
+1021747146
+"Vår helt redder dagen" av Lord Rahl
+1279868694
+"Professor Anders sin konglekanon" av Halvor
+-346708206
+"Han knuste Rubens eneste glede i et ellers sørgelig liv," sier satan.
+299611192
+"Vår helt på auksjon" av Lord Rahl
+-1491962876
+"20 spørsmål" av Lord Rahl
+-2068988294
+"Bondesjakk med eventyrere på Alle Sine Dager" av Halvor
+-313600104
+"Han bare lo av den stakkars druiden som fikk skjegget sitt spist av ei geit!"
+-1485768283
+"Du overhører en samtale. Det er ikke populært." av Uno
+1583254106
+"Flaskepost fra Professor Anders" av Halvor
+-1251247376
+"Han slaktet jo ned fanger uten grunn, og det i mitt rike!" sier Satan.
+-1298407071
+"Matgilde på Skipperkroa." av Halvor
+898756743
+"Småbarn som leker eventyrere" av Uno
+-1411354852
+"Han ville ikke selge den sørgelige skredderen sin egen saks," sier Satan.
+1029527378
+"Han beholdt saksa som tilhørte den stakkars sakseløse skredderen," sier Satan.
+2136786735
+"Det skal overhode ikke være lett å få seg noe å drikke" av Totallyignorant
+1596406127
+"Også drepte han Lars i smultringboden i Dypvann", sier satan. Gud nikker.
+-184846994
+"Han tråkket med vilje på brillene til den stakkars skribenten", sier satan.
+-164762077
+"Han stjal alle rupiene til den uskyldige unge seileren på Skipperkroa", sier   satan.
+-1316344752
+"Han bare så på mens banansoldatene skambanket en dverg", sier satan.
+1629989961
+"Han solgte en flaske med tresprit til en stakkars uteligger", sier satan.
+-759846301
+"Han lo og husket i vei, mens den lille gutten bare gråt og gråt", sier Satan.
+910909768
+"Han knuste Rubens eneste glede i et ellers sørgelig liv", sier satan.
+-1840385064
+"Han ville ikke selge den sørgelige skredderen sin egen saks", sier Satan.
+-1110468878
+"Han beholdt saksa som tilhørte den stakkars sakseløse skredderen", sier Satan.
+131008207
+"Han drepte tre barn som lekte sisten. Og moren dems etterpå", gliser Satan.
+-1739444236
+"I Veslegrend drepte han tre uskyldige barn og moren deres", gliser Satan.
+-330350202
+"Krangel med en Svarthauging" av Uno
+-2082879853
+"Møte med en jogger." av Uno
+800513555
+"Eksperiment med kamelkraft" av Uno
+934091847
+"Luftkamp med pirater" av Uno
+764136681
+"Krangel med en sjømann." av Uno
+356054551
+"Knep med en kongerupi" av Uno
+446114156
+"Diskusjon om flytrafikk" av Uno
+-50471543
+"Vognmannens grusomme skjebne" av Totallyignorant
+-1789730703
+"Møte med en gamling" av Uno
+-633005376
+"Møte med en mimeartist" av Uno
+150444054
+"Møte med en søppelsanker" av Uno
+837034072
+"Møte med en nybegynner" av Uno
+2095473746
+"Et tilfelle av feilidentifikasjon" av Uno
+-1769410274
+"Møte med en underlig sjøulk." av Uno
+77229381
+"Spilleren krangler med en papegøye." av Uno
+551446992
+"Vår helt og Zokor-beina" av Lord Rahl
+-1008613711
+"Vår helt og vandalene" av Lord Rahl
+1969727809
+"Paddeveddeløp" av Uno
+853842754
+"Vår helt og den hysteriske jenta" av Lord Rahl
+-642840207
+"Vår helt og en bøtte med slanger" av Lord Rahl
+-1240412780
+"padder i hotellrommet" av Uno
+346247422
+"Møte med paddesalgsmann" av Uno
+-249126878
+"ørkendrosje med kamel" av Uno
+-344777969
+"Vår helt og paddene" av Lord Rahl
+579105560
+"Vår helt og Dypvannsbrønnen" av Lord Rahl
+702121724
+"Blindpassasjer i ballongen" av Uno
+2094008871
+"Eulalie Soeurs" av Uno
+1231083006
+"Spørsmål om Ostemafiaen" av Uno
+2081663911
+"En ledetråd til Eulalie" av Uno
+-330155967
+"Spilleren leter etter ledetråder" av Uno
+-1932819973
+"Spilleren finner ostehuset forlatt" av Uno
+-329982025
+"Spilleren søker opplysninger om Ostemafiaen" av Uno
+-1546745776
+"Fanget av Ostemafiaen" av Uno
+-583257916
+"Møte med mafiasjefen" av Uno
+-1669354384
+"Ostemafiaens Hus." av Uno
+-740687218
+"Tjukkasens Skjulested" av Uno
+2104460669
+"Tjukkasen og kompisen hans" av Uno
+778420282
+"I det finere strøket i Dypvann" av Uno
+-1273299266
+"Brutus' Hus" av Uno
+-1765767029
+"Vår helt, Eselhviskeren" av Lord Rahl
+-2138116988
+"Møte med en skipsbrudden kar" av Uno
+2033371018
+"Han smurte lim utover stolen til bokhandleren i Høyborg", sier Satan.
+326369655
+"Han smurte lim på stolen til bokhandleren i Høyborg", sier Satan.
+-1241634000
+"Første tur til Høyborg." av Halvor
+2010305995
+"Vår helt renser et hus for padder" av Lord Rahl
+-1544114867
+"Padder i tollbua" av Uno
+1763253629
+"Belønningstid" av Uno
+-1386290323
+"Oversjefen overlistet" av Uno
+-1987845038
+"Kåres komplott" av Uno
+-1273623453
+"Maifafangenskap" av Uno
+393718836
+"Fortsettelse" av Uno
+-888106823
+"Møte med mafiakarer" av Uno
+1376663024
+"Melding fra Mafiaen" av Uno
+1704175870
+"Spilleren skygger mafiatypene " av Uno
+863245482
+"Møte med Ostemafiakontakt" av Uno
+796443737
+"Tølper med padde jager ungjente" av Ylva
+172933903
+"Eulalie Soeurs har åpent" av Uno
+67690327
+"Vår helt blir forsøkt ranet" av Lord Rahl
+-434161468
+"Plapreavslutning med professor Anders" av Halvor
+753363798
+"Ørkenjakt" av Halvor
+-2109485411
+"Jakten på ballongfantomet" av Halvor
+-1552436921
+"Plapring med professor Anders" av Halvor
+-26476301
+"Ormer i bokbutikken" av Uno
+2099561468
+-------------------------------------------------------------------------------
+395575864
+"Ostekomplottet" av Uno
+1758245107
+"Han druknet en kar på søppeldynga i en haug med råtne smultringer", sier Satan.
+1053258831
+"Innbrudd i Brutus' Hus" av Uno
+698611534
+"Paddebøtte" av Halvor
+1208057254
+"Han kylte en padde på en stakkarslig fattigper", sier Satan.
+1312666948
+"Drepte en forsvarsløs prest når han besøkte helvete sist", sier Satan.
+-466122399
+()TEMP
+-1136616966
+"Han dynket en forsvarsløs kattunge i gift og matet den til en blind hund."
+62476520
+"Han etterlot kjempen Muspell for å råtne i fangehullet sitt", sier Satan.
+-977819892
+"Sjørøvere! (men man klarer seg ganske bra)" av Cinaro
+-247674387
+"Helt uprovosert drepte han en forsvarsløs jazzkaptein."
+138159265
+"Han gadd ikke hjelpe den stakkars nybegynneren i det hule treet", sier Satan.
+-449913429
+"Han tok livet av den stakkars nybegynneren i det hule treet", sier Satan.
+-542325871
+"Spilleren overhører en underlig samtale (åttende havet)" av Uno
+-2035478398
+"Røverleiren" av Uno
+-246334389
+"Spilleren får vite hvor Tjodleif er" av Uno
+-45064326
+"Spilleren løser oppdraget fra Yulak" av Uno
+1466240466
+"Oppdrag fra Yulak" av Uno
+-551000612
+"Spilleren vil finne ut mer om Tjodleif" av Uno
+708104011
+"Spilleren finner ut hvor Tjodleif dro" av Uno
+-191337588
+"Spilleren treffer en flyktning fra orkene" av Uno
+1712434617
+
+]C[_GOOD_DEED
+"Han befridde Veslegrend fra den slemme Griffen," sier Gud fornøyd.
+-751581393
+"Han beseiret vampyren Rudolf Blodstrupmoen på Sumpøya" erklærer Gud strålende.
+98010539
+"Han ble kvitt den slemme zombielorden på kirkegården utenfor Svarthaug."
+-1147634499,999849149
+"Han brukte opp healingskrollen sin på å redde en vakt i Dypvann!" sier Gud.
+-364970838,1782512810
+"Han brukte skrollen sin på mannen som var blitt stygt skadet på søppelplassen!"
+-1195518068,951965580
+"Han delte ut mat til flyktningene utenfor katedralen i Høyborg."
+-1004719976,1142763672
+"Han drepte den forferdelige trollmannen som ødela en hel by med en grusom       zombieforbannelse!" sier Gud. Han ser på deg og smiler: "Godt jobba!"
+-438775743,1708707905
+"Han drepte det onde treet Gromsommur, et ondt, ondt tre." sier Gud.
+-1796446071,351037577
+"Han drepte egenhendig en av dine onde demoner i fjella" sier Gud stolt.
+29961152
+"Han drepte jo den onde bloben som lenge hadde plaget Svarthaug."
+643801684
+"Han drepte vampyren i krypten, en skikkelig slemming og blodsuger av rang!"
+-733211562,1414272086
+"Han døde jo for en verdig sak da - han ville ikke hjelpe de slemme orkene."
+-547111240
+"Han døde på en så bestialsk og grusom måte at han fortjener litt medfølelse"    ymter Gud frampå.
+931034287
+"Han er organdonor, og tenker på andre selv i de mest tragiske omstendigheter."
+-1212156921,935326727
+"Han er snill og omtenksom, selv mot motbydelige slabbedasker som Feite Frank."
+-65724922,2081758726
+"Han ga den sotete jenta tilbake alle sine penger, uten et ond ord eller tanke."
+185667902
+"Han ga en gammel mann nytt livsmot når han hjalp til med ballkasting."
+-156047978,1991435670
+"Han ga jo mat til den sultne fangen fra landsbyen." sier Gud.
+-608371661
+"Han gav jo bort grøtsleiva si gratis til den trengende mannen i Dypvann."
+1009249670
+"Han gjenopplivet fyren utenfor zombiebyen og fikk ham over på de snilles side!"
+-415403913,1732079735
+"Han gjorde kål på den slemme heksa i Dypvann!" sier Gud. Satan knurrer beskt.
+-854184589,1293299059
+"Han har vært generøs med de fattige og krigsrammede i Høyborg."
+670226288
+"Han helbredet den stygt forbrente flyktningen utenfor katedralen i Høyborg."
+-917118809
+"Han hjalp den stakkars skribenten fra å få knust brillene sine," sier gud.
+-484481852,1663001796
+"Han hjalp den stakkars uteliggeren ved brygga i Svarthaug." sier Gud.
+-971118318,1176365330
+"Han hjalp den stakkars vakta i Dypvann da." sier gud. Satan snøfter ondt.
+530934075
+"Han hjalp den utmatta, dødstørste mannen til brønnen i ørkenbyen," sier Gud.
+-143442580,2004041068
+"Han hjalp jo de stakkars folka i ørkenen da, de uten noen penger!"
+-47137741,2100345907
+"Han hjalp jo til etter angrepet på Dypvann uten å kreve noe igjen for det."
+-909724056
+"Han hjalp mannen i Veslegrend med å male huset sitt." Gud smiler varmt.
+-820234826
+"Han hjalp uselvisk fiskestangselgeren med den tunge kassa", sier Gud.
+-720336391
+"Han hjelper med glede sine medmennesker uten å be om noe i gjengjeld," sier    Gud.
+-2020124283,127359365
+"Han klarte å avsløre en av dine onde hekser som var innom Veslegrend" sier Gud.
+-60144114,2087339534
+"Han kuttet ned de de tre hengte bøndene og ga dem en skikkelig begravelse."
+-1796713313,350770335
+"Han leverte pengene som Fru Fransen hadde glemt på Alle Sine Dager," sier gud.
+-404257350
+"Han lånte bort bibelen sin under begravelsen utenfor Høyborg," smiler Gud.
+-77080904,2070402744
+"Han muntret opp de skadde barna utenfor katedralen i Høyborg."
+222900866
+"Han ofret seg jo for at den unge jenta skulle overleve mot lavamonsteret"
+-773030645,1374453003
+"Han prøvde ihvertfall å redde kone og barn under angrepet på ørkenfolka da."
+-584409240,1563074408
+"Han redda ihvertfall fyren oppe på loftet i heksehuset fra en fæl død."
+-581841128,1565642520
+"Han redda jo borgermesterens datter fra kannibalene!" sier gud og smiler.
+-66130604,2081353044
+"Han reddet ballongfantomet fra den sikre død, han gir synderen livet igjen!"
+-596487747,1550995901
+"Han reddet eventyrerdvergen Dunder fra de voldelige banansoldatene," sier Gud.
+-1203010617,944473031
+"Han reddet rundt tretti sjømenn fra drukningsdøden utenfor Svarthaug" sier Gud.
+-1854039138,293444510
+"Han reddet søppeltømmeren som var i livsfare på søppelplassen!" sier Gud.
+185898401
+"Han ryddet en av de blodtørstige vampyrene i Svarthaug av veien." sier Gud.
+922059410
+"Han satte livet på spill for å redde den gode presten i Svarthaug."
+-1963365932,184117716
+"Han skaffet perlekjedet til den sørgende enkemannen på brygga. Det var en god  gjerning," sier gud.
+-52696433,2094787215
+"Han sluttet å jobbe for Yulak når han fant ut hva Yulak stod for." sier Gud.
+-1636111778,511371870
+"Han solgte sin Sorte Enke til spottpris, så Lennart kunne redde baren sin."
+-936815392,1210668256
+"Han var virkelig til stor hjelp for ofrene av Kåre Bananers angrep på Høyborg."
+-1003499794,1143983854
+"Jammen han viste de to herrene veien til toalettet da."
+-1632204313,515279335
+"Men han bærte den halvdøde fyren hele veien fra ørkenen til Dypvann!"
+-1957912489,189571159
+"Men han ga jo vina si til den tørste, halvdøde fyren i ørkenen!" sier gud.
+-441143665
+"Men han redda den stakkars fyren som fikk bank i Dypvann" svarer gud.
+779042675
+"Men han sluttet jo sitt samarbeid med Yulak, den onde mafiabossen" sier gud.
+-1739980153,407503495
+"Men under angrepet på ørkenfolka så han nåde i kone og barn. Det var snilt."
+-767677282,1379806366
+"Når andre har problemer hjelper han til, helt uten egeninteresse."
+-1017164776,1130318872
+"Tross alt ga han vannet sitt til den tørste, halvdøde fyren i ørkenen!"
+-1126608650,1020874998
+Gud leter litt mer i boka si. "Skal vi se," sier han og smiler. "Han hjalp en   fyr i Veslegrend fra å falle ned til den visse død i brønnen."
+-782916052,1364567596
+Gud tenker seg om. "Han ønsker å beskytte alle mine skapninger, da. Maur og!"
+-465279516
+"Han drepte den forferdelige trollmannen som ødela en hel by med en grusom      zombieforbannelse!" sier Gud. Han ser på deg og smiler: "Godt jobba!"
+43202069
+"Han deler gjerne skjeggproteser med ofre for geiteangrep."
+725898097
+"Han reddet druidens skjegg fra en jordbærglad fjellgeit," sier Gud.
+-1279241726
+"Han lånte bort bibelen sin under begravelsen utenfor Høyborg", smiler Gud.
+-69593512
+"Han hjalp den stakkars skribenten fra å få knust brillene sine", sier gud.
+-570764619
+"Han skaffet perlekjedet til den sørgende enkemannen på brygga. Det var en god  gjerning", sier gud.
+-4761473
+"Han leverte pengene som Fru Fransen hadde glemt på Alle Sine Dager", sier gud.
+1791161258
+"Han reddet eventyrerdvergen Dunder fra de voldelige banansoldatene", sier Gud.
+992407992
+"Han reddet druidens skjegg fra en jordbærglad fjellgeit", sier Gud.
+916176882
+"Han døde på en så bestialsk og grusom måte at han fortjener litt               medfølelse" ymter Gud frampå.
+-2096086218
+"Han befridde Veslegrend fra den slemme Griffen", sier Gud fornøyd.
+-973476186
+"Han hjelper med glede sine medmennesker uten å be om noe i gjengjeld", sier    Gud.
+1106931296
+Gud leter litt mer i boka si. "Skal vi se", sier han og smiler. "Han hjalp en   fyr i Veslegrend fra å falle ned til den visse død i brønnen."
+1300396476
+"Han hjalp den utmatta, dødstørste mannen til brønnen i ørkenbyen", sier Gud.
+-229725348
+"Han reddet den unge soldaten i Høyborg, da", sier Gud.
+-1820190983
+"Han hjalp den lille fattige familien med det sta muldyret deres", sier Gud.
+-473091464
+"Han hjalp de stakkars flyktningbarna i Dypvann", sier Gud.
+2086300042
+()TEMP
+-1136616966
+"Han lot den stakkars fengslede orkeshamanen uten tunge få leve."
+-666333444
+"Han ga det magiske vannskinnet tilbake til Ruben", sier Gud.
+320230832
+"Han overlot ventelisteplassen på bodplass til Milda", sier Gud.
+324887829
+"Han overlot ventelisteplassen på bodplass til Bakern og Milda", sier Gud.
+1416795033
+"Han husker det første budet og vil ikke tilbe andre guder enn meg", sier Gud.
+-1067895572
+"Han reddet onkel Tjodleif fra de fæle røverne", sier Gud.
+-2049578583
+
+]C[FLUENE_BLE_FANGET
+#13921
+1824130459
+#13922
+1824130460
+#13923
+1824130461
+
+]C[VEKK_FRA_FLUER
+{@}9081
+277008839
+{@}4510
+723415959
+{@}12631
+-393285756
+
+]C[MAT_TIL_RUBEN
+)(PØLSE
+-1901991804
+)(BANANER
+-914335577
+)(GRØTPÅPOSE
+-57354316
+)(TORPO
+-1908975793
+)(EPLE
+-621664557
+)(VANNMELON
+-1817736450
+)(POSEMEDSMULTRINGER
+-325230242
+)(MARIEKJEKS
+-739040294
+
+]C[TEKST_TIL_RUBEN
+Du gir ham pølsa,
+-97511985
+Du gir ham bananene,
+1855107013
+Du gir ham posen med grøt,
+-1954626802
+Du gir ham torpoen,
+-1409522541
+Du gir ham eplet,
+77933731
+Du gir ham melonen,
+-486503694
+Du gir ham posen med smultringene,
+-66206282
+Du gir ham kjekspakken,
+-1349391501
+
+]C[DET_SMAKTE_GODT
+"Den pølsa du ga meg sist smakte kjempegodt!" sier Ruben.
+1402884375
+"De bananene du ga meg sist var veldig gode," sier Ruben glad.
+-2131598261
+"Den grøten jeg fikk av deg sist smakte veldig godt - den ga en god metthet,"    sier Ruben fornøyd.
+-352569052
+"Jeg ble god og mett av den torpogrønnsaken du ga meg sist," sier Ruben.
+-93822588
+"Det eplet du ga meg sist smakte kjempegodt," sier Ruben.
+1738710358
+"Den vannmelonen du ga meg sist var veldig veldig god," sier Ruben strålende.
+165050450
+"De smultringene du ga meg sist var virkelig kjempegode," sier Ruben glad.
+-1646674121
+"Det var gode kjeks du ga meg sist," sier Ruben.
+1340663173
+"De bananene du ga meg sist var veldig gode", sier Ruben glad.
+1149725042
+"Den grøten jeg fikk av deg sist smakte veldig godt - den ga en god metthet",    sier Ruben fornøyd.
+1098427108
+"Jeg ble god og mett av den torpogrønnsaken du ga meg sist", sier Ruben.
+-2099601116
+"Det eplet du ga meg sist smakte kjempegodt", sier Ruben.
+-401285897
+"Den vannmelonen du ga meg sist var veldig veldig god", sier Ruben strålende.
+762211434
+"De smultringene du ga meg sist var virkelig kjempegode", sier Ruben glad.
+1768866910
+"Det var gode kjeks du ga meg sist", sier Ruben.
+-799333082
+
+]C[SELG_SKREDDEREN_ALKOHOL
+)(TRESPRITFLASKE
+888387037
+)(VINFLASKE
+60646127
+)(SPRITFLASKE
+360601612
+
+]C[SAMUELSENS_ÅRSAK
+Kanskje han la merke til at sølvbegeret er borte?
+-74605024
+"Noen har stjålet helligvannet!" roper han.
+-1402393264
+"Sankt Stians lendeklede er stjålet!"
+772783567
+"Sankt Johans hellige snusleppe er stjålet!"
+1922611280
+"Sankt Pedros samlede fingernegler er stjålet!"
+-1464208882
+Så han kanskje tauet som hang fra galleriet?
+19338532
+Så han kanskje tauet som hang fra klokketårnet?
+2100184361
+
+]C[TIDSFRYS_POSISJON
+()GÅR-I-MIDTGANGEN
+-579910899
+()GÅR-I-KORET
+1319648506
+
+]C[TILBAKE_ETTER_TIDSFRYS
+@111
+-1210686130
+@127
+-1210618475
+@138
+-1210550825
+@140
+-1210483184
+@16391
+2026213767
+@16375
+2026078473
+@16400
+2034124602
+@16402
+2034124604
+
+]C[DRAGE1
+"hjerter,
+1045368220
+"spar,
+4656823
+"ruter,
+-1595846390
+"kløver,
+-879017765
+
+]C[DRAGE2
+spar,
+248708358
+kløver,
+-1041978665
+hjerter,
+882407321
+ruter,
+866125439
+
+]C[DRAGE3
+spar,
+248708358
+kløver,
+-1041978665
+hjerter,
+882407321
+ruter,
+866125439
+
+]C[DRAGE4
+spar".
+-2098666918
+hjerter".
+18148479
+ruter".
+-623462654
+kløver".
+-1575767861
+
+]C[LAGRE-LINJE
+()TEMP
+-1136616966
+
