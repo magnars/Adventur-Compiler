@@ -5,11 +5,14 @@ require 'commands/procedure_call'
 require 'room'
 
 class CommandsProcedureCallTestCase < Test::Unit::TestCase
+  def test_should_not_be_confused_with_delayed_call
+    assert(!ProcedureCall.parse?("(@)123 om 3 ..."))
+  end
 
   def test_should_generate_code
     room = ['(@)23', 'should not show'].extend(Room)
     room.number = 17
-    @room23 = ['contents', 'contents', '-', '1', 'alternative', '123'].extend(Room)
+    @room23 = ['contents', 'contents', '=', 'alternative', '123'].extend(Room)
     room_loader = mock('room_loader')
     room_loader.expects(:get).with(23).returns(@room23)
     enterpreter = mock('enterpreter')
@@ -21,7 +24,7 @@ class CommandsProcedureCallTestCase < Test::Unit::TestCase
     ProcedureCall::ReturnFromProcedureCall.stubs(:new).returns(ret = mock('return'))
     ret.stubs(:code).returns([])
     enterpreter.expects(:define_function).with("procedure_call_to_23", [@contents, @contents, ret])
-    @procedure = ProcedureCall.parse?(room.current, room, enterpreter)    
+    @procedure = ProcedureCall.parse?(room.current, room, enterpreter)
     @contents.stubs(:code).returns("$this->receiver->code();")
     assert_equal(expected_code, @procedure.code)
   end
@@ -32,7 +35,7 @@ class CommandsProcedureCallTestCase < Test::Unit::TestCase
   end
 
   private
-  
+
   def expected_code
     ['$this->receiver->room_number_changed(23);',
      '$continue = $this->procedure_call_to_23();',

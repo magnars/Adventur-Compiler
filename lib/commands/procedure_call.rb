@@ -1,18 +1,18 @@
 class ProcedureCall
-  
+
   def initialize(room_number, procedure_number)
     @room_number, @procedure_number = room_number, procedure_number
   end
-  
-  def self.parse?(line, room, enterpreter)
-    if line[0..2] == "(@)"
-      procedure_number = line[3..-1].to_i
+
+  def self.parse?(line, room = nil, enterpreter = nil)
+    if line =~ /^\(@\)(\d+)$/
+      procedure_number = $1.to_i
       unless enterpreter.has_function("procedure_call_to_#{procedure_number}")
         enterpreter.register_function("procedure_call_to_#{procedure_number}")
         procedure = enterpreter.room_loader.get(procedure_number)
         commands = []
-        until procedure.current == "-" or procedure.current == "+" or procedure.current == nil
-          commands << enterpreter.current_command(procedure) 
+        until procedure.current == "=" or procedure.current == nil
+          commands << enterpreter.current_command(procedure)
           procedure.next
         end
         commands << ReturnFromProcedureCall.new
@@ -36,5 +36,5 @@ class ProcedureCall
       "return true;"
     end
   end
-  
+
 end
