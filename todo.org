@@ -7,9 +7,9 @@
 ** DONE room.rb
 ** DONE room_loader.rb
 ** DONE timed_jump_coordinator.rb
-* Commands [1/29]
+* Commands [2/29]
 ** DONE activate_saving.rb
-** TODO add_deed.rb
+** DONE add_deed.rb
 ** TODO add_flag.rb
 ** TODO add_kongerupi.rb
 ** TODO add_timejump.rb
