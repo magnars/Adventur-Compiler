@@ -1,10 +1,11 @@
+# -*- coding: utf-8 -*-
 require 'test/unit'
 require 'commands/activate_saving'
 
 class CommandsActivateSavingTestCase < Test::Unit::TestCase
 
   def setup
-    @save = ActivateSaving.parse?("#SAVE# På torget")
+    @save = ActivateSaving.parse?(":save => På torget")
   end
 
   def test_should_build_code

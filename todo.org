@@ -1,4 +1,4 @@
-* Gjennomgang [7/8]
+* Gjennomgang [8/8]
 ** DONE change_tracker.rb
 ** DONE changes_only_compiler.rb
 ** DONE enterpreter.rb
@@ -6,9 +6,9 @@
 ** DONE page.rb
 ** DONE room.rb
 ** DONE room_loader.rb
-** TODO timed_jump_coordinator.rb
-* Commands [0/28]
-** TODO activate_saving.rb
+** DONE timed_jump_coordinator.rb
+* Commands [1/29]
+** DONE activate_saving.rb
 ** TODO add_deed.rb
 ** TODO add_flag.rb
 ** TODO add_kongerupi.rb
@@ -37,10 +37,14 @@
 ** TODO summarize_deeds.rb
 ** TODO unfinished_story.rb
 ** TODO unreachable
-* Commands som gjemmer seg [0/1]
+* Commands som gjemmer seg [0/5]
 ** TODO Enterpreter.initialize_hashcode_keeper
    Denne har meninger om saved_command_regexp og deed_regexp. Scanner alle
    filene for disse.
+** TODO timed_jump_coordinator lager old-code
+** TODO timed_jump_coordinator scanner etter delayed calls med regexp
+** TODO timed_jump_coordinator finner room_references med regexp
+** TODO timed_jump_coordinator finner romreferanser i alternativer selv
 * Conditionals [0/1]
 ** TODO Port fra intelliadv
 * Mulige problemer [0/1]
