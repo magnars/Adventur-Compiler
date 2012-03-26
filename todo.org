@@ -7,7 +7,7 @@
 ** DONE room.rb
 ** DONE room_loader.rb
 ** DONE timed_jump_coordinator.rb
-* Commands [14/29]
+* Commands [16/29]
 ** DONE activate_saving.rb
 ** DONE add_deed.rb
 ** DONE add_flag.rb
@@ -22,8 +22,8 @@
 ** DONE increase_bodycount.rb
 ** DONE plain_text.rb
 ** DONE register_delayed_call.rb
-** TODO reinstate_alternatives.rb
-** TODO remove_alternatives.rb
+** DONE reinstate_alternatives.rb
+** DONE remove_alternatives.rb
 ** TODO remove_flag.rb
 ** TODO run_saved_command.rb
 ** TODO save_command.rb
@@ -47,7 +47,10 @@
 ** TODO timed_jump_coordinator finner romreferanser i alternativer selv
 * Conditionals [0/1]
 ** TODO Port fra intelliadv
-* Ekstra problemer [0/2]
+* Ekstra problemer [0/3]
 ** TODO Hashcoding av Saved Commands vil bli helt feil.
    Løsningen er å manuelt endre oppslagene i hashcodefile
 ** TODO :tidshopp +1 går til en kommando ->add_timejump(); ... trenger params
+** TODO den gamle løsningen har significant whitespace.
+   Det funker dårlig med emacs, og det er ørlitt tullete med { blocks }
+   - må gjøre noe med plain-tekstene som starter med " *", " #" o.l.
