@@ -7,7 +7,7 @@
 ** DONE room.rb
 ** DONE room_loader.rb
 ** DONE timed_jump_coordinator.rb
-* Commands [10/29]
+* Commands [12/29]
 ** DONE activate_saving.rb
 ** DONE add_deed.rb
 ** DONE add_flag.rb
@@ -18,8 +18,8 @@
 ** DONE count_visits.rb
 ** DONE end_paragraph.rb
 ** DONE end_subpage.rb
-** TODO goto_room.rb
-** TODO increase_bodycount.rb
+** DONE goto_room.rb
+** DONE increase_bodycount.rb
 ** TODO plain_text.rb
 ** TODO procedure_call.rb
 ** TODO register_delayed_call.rb
