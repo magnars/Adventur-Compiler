@@ -4,8 +4,8 @@ require 'commands/add_kongerupi'
 class CommandsAddKongerupiTestCase < Test::Unit::TestCase
 
   def setup
-    @add = AddKongerupi.parse?("kr.2")
-    @sub = AddKongerupi.parse?("kr.-23")
+    @add = AddKongerupi.parse?(":rupi +2")
+    @sub = AddKongerupi.parse?(":rupi -23")
   end
 
   def test_should_build_code
