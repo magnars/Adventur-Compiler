@@ -7,7 +7,7 @@
 ** DONE room.rb
 ** DONE room_loader.rb
 ** DONE timed_jump_coordinator.rb
-* Commands [25/30]
+* Commands [26/30]
 ** DONE activate_saving.rb
 ** DONE add_deed.rb
 ** DONE add_flag.rb
@@ -33,9 +33,9 @@
 ** DONE procedure_call.rb
 ** DONE comments
 ** DONE conditional_goto.rb
+** DONE alternatives_from_other.rb
 ** TODO conditional_command.rb
 ** TODO alternatives.rb
-** TODO alternatives_from_other.rb
 ** TODO sentence_with_variable.rb
 ** TODO command_bundle.rb
 * Commands som gjemmer seg [0/5]

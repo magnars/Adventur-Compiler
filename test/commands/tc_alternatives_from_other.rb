@@ -9,7 +9,7 @@ class CommandsAlternativesFromOtherTestCase < Test::Unit::TestCase
 
   def setup
     @room = ['{@}17', 'should not show'].extend(Room)
-    @room17 = ['should not show either', '-', '1', 'alternative', '123'].extend(Room)
+    @room17 = ['should not show either', '=', 'alternative', '123'].extend(Room)
     room_loader = mock('room_loader')
     room_loader.expects(:get).with(17).returns(@room17)
     enterpreter = mock('enterpreter')
@@ -22,7 +22,7 @@ class CommandsAlternativesFromOtherTestCase < Test::Unit::TestCase
     @alternatives.expects(:code).returns("$this->code();")
     assert_equal(['$this->receiver->room_number_changed(17);', '$this->code();'], @command.code)
   end
-  
+
   def test_should_complain_if_other_room_has_no_alternatives
     @room = ['{@}17'].extend(Room)
     @room17 = ['line 1', 'line 2'].extend(Room)
