@@ -7,7 +7,7 @@
 ** DONE room.rb
 ** DONE room_loader.rb
 ** DONE timed_jump_coordinator.rb
-* Commands [20/29]
+* Commands [21/29]
 ** DONE activate_saving.rb
 ** DONE add_deed.rb
 ** DONE add_flag.rb
@@ -28,7 +28,7 @@
 ** DONE run_saved_command.rb
 ** DONE summarize_deeds.rb
 ** DONE unfinished_story.rb
-** TODO unreachable
+** DONE unreachable
 ** TODO save_command.rb
 ** TODO command_bundle.rb
 ** TODO conditional_goto.rb

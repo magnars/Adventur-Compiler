@@ -19,6 +19,7 @@ require 'commands/conditional_goto'
 require 'commands/count_visits'
 require 'commands/activate_saving'
 require 'commands/unfinished_story'
+require 'commands/unreachable'
 require 'commands/end_subpage'
 require 'commands/increase_bodycount'
 require 'commands/add_timejump'
@@ -51,6 +52,7 @@ class Enterpreter
       AddKongerupi,
       ActivateSaving,
       UnfinishedStory,
+      Unreachable,
       DramaticPause,
       IncreaseBodycount,
       SummarizeDeeds,
