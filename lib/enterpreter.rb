@@ -17,7 +17,6 @@ require 'commands/assign_to_variable'
 require 'commands/reinstate_alternatives'
 require 'commands/conditional_goto'
 require 'commands/count_visits'
-require 'commands/change_location'
 require 'commands/activate_saving'
 require 'commands/unfinished_story'
 require 'commands/end_subpage'
@@ -50,7 +49,6 @@ class Enterpreter
       ConditionalCommand,
       RemoveFlag, AddFlag,
       AddKongerupi,
-      ChangeLocation,
       ActivateSaving,
       UnfinishedStory,
       DramaticPause,
