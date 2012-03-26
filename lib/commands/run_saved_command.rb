@@ -5,7 +5,7 @@ require 'room'
 
 class RunSavedCommand
   def self.parse?(line, room, enterpreter)
-    if line[0..2] === "[C]"
+    if line[0..2] === "<= "
       name = line[3..-1]
       commands = enterpreter.hashcode_keeper.contentlist_for(name).map do |content|
         conditional = OrConditional.new
@@ -18,13 +18,13 @@ class RunSavedCommand
       false
     end
   end
-  
+
   def initialize(command)
     @command = command
   end
-  
+
   def code
     @command.code
   end
-  
+
 end

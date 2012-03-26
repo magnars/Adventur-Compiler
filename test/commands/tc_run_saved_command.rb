@@ -8,7 +8,7 @@ require 'enterpreter'
 class CommandsRunSavedCommandTestCase < Test::Unit::TestCase
 
   def setup
-    @room = ['[C]TEST'].extend(Room)
+    @room = ['<= TEST'].extend(Room)
     create_enterpreter_mock
   end
 
@@ -33,11 +33,11 @@ class CommandsRunSavedCommandTestCase < Test::Unit::TestCase
     content.stubs(:codes).returns(codes)
     content
   end
-  
+
   def create_enterpreter_mock
     @enterpreter = mock('enterpreter')
     @keeper = mock('hashcode_keeper')
     @enterpreter.stubs(:hashcode_keeper).returns(@keeper)
   end
-  
+
 end
