@@ -7,7 +7,7 @@
 ** DONE room.rb
 ** DONE room_loader.rb
 ** DONE timed_jump_coordinator.rb
-* Commands [13/29]
+* Commands [14/29]
 ** DONE activate_saving.rb
 ** DONE add_deed.rb
 ** DONE add_flag.rb
@@ -21,8 +21,7 @@
 ** DONE goto_room.rb
 ** DONE increase_bodycount.rb
 ** DONE plain_text.rb
-** TODO procedure_call.rb
-** TODO register_delayed_call.rb
+** DONE register_delayed_call.rb
 ** TODO reinstate_alternatives.rb
 ** TODO remove_alternatives.rb
 ** TODO remove_flag.rb
@@ -37,6 +36,7 @@
 ** TODO conditional_command.rb
 ** TODO alternatives.rb
 ** TODO alternatives_from_other.rb
+** TODO procedure_call.rb
 * Commands som gjemmer seg [0/5]
 ** TODO Enterpreter.initialize_hashcode_keeper
    Denne har meninger om saved_command_regexp og deed_regexp. Scanner alle

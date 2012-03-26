@@ -2,7 +2,7 @@
 class CountVisits
 
   def self.parse?(line, room, enterpreter = nil)
-    if line =~ /^:besøk \+\+ \(max (\d+)\)/
+    if line =~ /^:besøk \+\+ \(max (\d+)\)$/
       new room.number, $1
     else
       false

@@ -1,22 +1,22 @@
 class RegisterDelayedCall
-  
+
   def self.parse?(line, room, enterpreter = nil)
-    if line[0..1] === "{}"
-      new line[2..-1], room.next
+    if line =~ /^\(@\)(\d+) om (\d+) ...$/
+      new $1, $2
     else
       false
     end
   end
-  
-  def initialize(delay, destination)
-    @delay, @destination = delay, destination
+
+  def initialize(destination, delay)
+    @destination, @delay = destination, delay
   end
-  
+
   def code
     [
       "$this->receiver->set_detail('$_CALL_DELAY', #{@delay});",
       "$this->receiver->set_detail('$_DELAYED_CALL', #{@destination});"
     ]
   end
-  
+
 end

@@ -5,7 +5,7 @@ require 'room'
 class CommandsRegisterDelayedCallTestCase < Test::Unit::TestCase
 
   def setup
-    room = ['{}3', '177'].extend(Room)
+    room = ['(@)177 om 3 ...'].extend(Room)
     @command = RegisterDelayedCall.parse?(room.first, room)
   end
 
