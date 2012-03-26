@@ -8,16 +8,16 @@ class RoomLoaderTestCase < Test::Unit::TestCase
   def setup
     @folder = "testrooms"
     @subfolder = "#{@folder}/A00"
-    @roomfile = "#{@subfolder}/A0.txt"
+    @roomfile = "#{@subfolder}/A0.adv"
     teardown
-    
+
     Dir.mkdir(@folder)
     Dir.mkdir(@subfolder)
     File.open(@roomfile, 'w') { |file| file.print "Line 1 of room #0\n Line 2 of room #0  \n" }
 
     @loader = RoomLoader.new @folder
   end
-  
+
   def teardown
     File.delete(@roomfile) if File.exists? @roomfile
     Dir.rmdir(@subfolder) if File.exists? @subfolder
@@ -33,12 +33,12 @@ class RoomLoaderTestCase < Test::Unit::TestCase
     assert_equal("none", RoomLoader.last_loaded_room_number)
     @loader.get(0)
     assert_equal(0, RoomLoader.last_loaded_room_number)
-  end 
+  end
 
   def test_should_extend_with_room_module
     assert_kind_of(Room, @loader.get(0))
   end
-  
+
   def test_should_insert_room_number
     assert_equal(0, @loader.get(0).number)
   end
