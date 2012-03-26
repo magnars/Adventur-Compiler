@@ -7,7 +7,7 @@
 ** DONE room.rb
 ** DONE room_loader.rb
 ** DONE timed_jump_coordinator.rb
-* Commands [18/29]
+* Commands [19/29]
 ** DONE activate_saving.rb
 ** DONE add_deed.rb
 ** DONE add_flag.rb
@@ -26,17 +26,17 @@
 ** DONE remove_alternatives.rb
 ** DONE remove_flag.rb
 ** DONE run_saved_command.rb
-** TODO save_command.rb
-** TODO sentence_with_variable.rb
-** TODO summarize_deeds.rb
+** DONE summarize_deeds.rb
 ** TODO unfinished_story.rb
 ** TODO unreachable
+** TODO save_command.rb
 ** TODO command_bundle.rb
 ** TODO conditional_goto.rb
 ** TODO conditional_command.rb
 ** TODO alternatives.rb
 ** TODO alternatives_from_other.rb
 ** TODO procedure_call.rb
+** TODO sentence_with_variable.rb
 * Commands som gjemmer seg [0/5]
 ** TODO Enterpreter.initialize_hashcode_keeper
    Denne har meninger om saved_command_regexp og deed_regexp. Scanner alle

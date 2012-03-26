@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 require 'test/unit'
 require 'rubygems'
 require 'mocha'
@@ -12,7 +13,7 @@ class CommandsSummarizeDeedsTestCase < Test::Unit::TestCase
     enterpreter.stubs(:hashcode_keeper).returns(keeper)
     keeper.stubs(:contentlist_for).returns([content_mock('"Slemt altså"', [608088895])], [content_mock('Snilt også', [224333227]), content_mock('Mer snilt', [739606083])])
 
-    @command = SummarizeDeeds.parse?("??HIMMEL ELLER HELVETE??", nil, enterpreter)
+    @command = SummarizeDeeds.parse?(":gud-og-satan-krangler", nil, enterpreter)
   end
 
   def content_mock(text, codes)
@@ -25,7 +26,7 @@ class CommandsSummarizeDeedsTestCase < Test::Unit::TestCase
   def test_should_generate_code
     assert_equal(expected_code, @command.code)
   end
-  
+
   def expected_code
     [
       '$evil = array();',
@@ -49,5 +50,5 @@ class CommandsSummarizeDeedsTestCase < Test::Unit::TestCase
       '}'
     ]
   end
-  
+
 end
