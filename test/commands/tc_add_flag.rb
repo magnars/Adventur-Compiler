@@ -4,12 +4,12 @@ require 'commands/add_flag'
 class CommandsAddFlagTestCase < Test::Unit::TestCase
 
   def setup
-    @command = AddFlag.parse?("()FLAG")
+    @command = AddFlag.parse?("++ FLAG")
   end
 
   def test_should_only_parse_adding_of_flags
     assert(!AddFlag.parse?("some text"), "AddFlag should not parse plain text.")
-    assert(!AddFlag.parse?(")(FLAG"), "AddFlag not parse )(FLAG).")
+    assert(!AddFlag.parse?("-- FLAG"), "AddFlag not parse )(FLAG).")
   end
 
   def test_should_build_code
