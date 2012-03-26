@@ -35,21 +35,21 @@ class Enterpreter
 
   def self.command_types
     [
-      SaveCommand, 
-      RunSavedCommand, 
-      GotoRoom, 
-      ConditionalGoto, 
+      SaveCommand,
+      RunSavedCommand,
+      GotoRoom,
+      ConditionalGoto,
       ProcedureCall,
       CountVisits,
-      AssignToVariable, 
-      AlternativesFromOther, 
-      Alternatives, 
-      RemoveAlternatives, 
-      ReinstateAlternatives, 
-      CommandBundle, 
-      ConditionalCommand, 
-      RemoveFlag, AddFlag, 
-      AddKongerupi, 
+      AssignToVariable,
+      AlternativesFromOther,
+      Alternatives,
+      RemoveAlternatives,
+      ReinstateAlternatives,
+      CommandBundle,
+      ConditionalCommand,
+      RemoveFlag, AddFlag,
+      AddKongerupi,
       ChangeLocation,
       ActivateSaving,
       UnfinishedStory,
@@ -58,13 +58,13 @@ class Enterpreter
       SummarizeDeeds,
       RegisterDelayedCall,
       AddTimejump,
-      AddDeed, 
+      AddDeed,
       EndParagraph,
-      SentenceWithVariable, 
+      SentenceWithVariable,
       PlainText
     ]
   end
-  
+
   def initialize(room_number, room_loader, timed_jump_coordinator)
     @room_loader, @room_number, @timed_jump_coordinator = room_loader, room_number, timed_jump_coordinator
     @functions = []
@@ -89,7 +89,7 @@ class Enterpreter
       command = type.parse?(room.current.clone, room, self) and break command
     end
   end
-  
+
   def register_function(name)
     @functions << Function.new(name, [])
   end
@@ -97,20 +97,20 @@ class Enterpreter
   def define_function(name, commands)
     @functions.find { |f| f.name === name }.commands = commands
   end
-  
+
   def has_function(name)
     !! @functions.find { |f| f.name === name }
   end
-    
+
   def hashcode_keeper
     @@hashcode_keeper ||= initialize_hashcode_keeper
   end
-  
+
   def self.reset_hashcode_keeper
     @@hashcode_keeper = nil
   end
-  
-  private 
+
+  private
 
   def initialize_hashcode_keeper
     filename = "#{File.dirname(__FILE__)}/../resources/hashcodefile.txt"
@@ -119,7 +119,7 @@ class Enterpreter
     deed_regexp = /^(---|\+\+\+)[^\n]*\n([^\n]+)/m
     @room_loader.all_room_numbers.each do |number|
       room_contents = @room_loader.get(number).join("\n")
-      room_contents.scan(saved_command_regexp).each {|key, command| keeper.add(key, command) } 
+      room_contents.scan(saved_command_regexp).each {|key, command| keeper.add(key, command) }
       room_contents.scan(deed_regexp).each { |type, description| keeper.add((type === "---" ? "_EVIL_DEED" : "_GOOD_DEED"), description) }
     end
     keeper.save(filename)
@@ -129,11 +129,11 @@ class Enterpreter
   def code_for(commands)
     code_skeleton.gsub(":ROOMNUMBER:", @room_number.to_s).gsub(":COMMANDS:", indented_commands(commands)).gsub(":FUNCTIONS:", @functions.map { |f| ["private function #{f.name}() {", indented_commands(f.commands), "}"] }.flatten.join("\n"))
   end
-  
+
   def indented_commands(commands)
     commands.map { |c| c.code }.flatten.map { |line| "  #{line}" }.join("\n")
   end
-  
+
   class Function
     attr_reader :name
     attr_accessor :commands
@@ -151,5 +151,5 @@ public function execute() {
 :FUNCTIONS:
 CODE
   end
-  
+
 end

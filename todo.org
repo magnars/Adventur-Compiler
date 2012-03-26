@@ -1,0 +1,48 @@
+* Gjennomgang [7/8]
+** DONE change_tracker.rb
+** DONE changes_only_compiler.rb
+** DONE enterpreter.rb
+** DONE hashcode_keeper.rb
+** DONE page.rb
+** DONE room.rb
+** DONE room_loader.rb
+** TODO timed_jump_coordinator.rb
+* Commands [0/28]
+** TODO activate_saving.rb
+** TODO add_deed.rb
+** TODO add_flag.rb
+** TODO add_kongerupi.rb
+** TODO add_timejump.rb
+** TODO alternatives.rb
+** TODO alternatives_from_other.rb
+** TODO assign_to_variable.rb
+** TODO change_location.rb
+** TODO command_bundle.rb
+** TODO conditional_command.rb
+** TODO conditional_goto.rb
+** TODO count_visits.rb
+** TODO end_paragraph.rb
+** TODO end_subpage.rb
+** TODO goto_room.rb
+** TODO increase_bodycount.rb
+** TODO plain_text.rb
+** TODO procedure_call.rb
+** TODO register_delayed_call.rb
+** TODO reinstate_alternatives.rb
+** TODO remove_alternatives.rb
+** TODO remove_flag.rb
+** TODO run_saved_command.rb
+** TODO save_command.rb
+** TODO sentence_with_variable.rb
+** TODO summarize_deeds.rb
+** TODO unfinished_story.rb
+** TODO unreachable
+* Commands som gjemmer seg [0/1]
+** TODO Enterpreter.initialize_hashcode_keeper
+   Denne har meninger om saved_command_regexp og deed_regexp. Scanner alle
+   filene for disse.
+* Conditionals [0/1]
+** TODO Port fra intelliadv
+* Mulige problemer [0/1]
+** TODO Hashcoding av Saved Commands vil bli helt feil.
+   Løsningen er å manuelt endre oppslagene i hashcodefile
