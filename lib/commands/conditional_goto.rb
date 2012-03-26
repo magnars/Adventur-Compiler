@@ -4,9 +4,13 @@ require 'conditional'
 
 class ConditionalGoto
   def self.parse?(line, room, enterpreter)
-    if line =~ /^\[@\](\d+)$/
+    if line =~ /^@(\d+) \?\?$/
+      conditional = Conditional.parse(")(nr#{$1}")
+      command = GotoRoom.parse?("@#{$1}", room, enterpreter)
+      ConditionalCommand.new conditional, command
+    elsif line =~ /^@(\d+) \?\? (.+)$/
       implicit_condition = ")(nr#{$1}"
-      explicit_condition = room.next
+      explicit_condition = $2
       if explicit_condition === "-"
         conditional = Conditional.parse(implicit_condition)
       else
@@ -14,19 +18,16 @@ class ConditionalGoto
       end
       command = GotoRoom.parse?("@#{$1}", room, enterpreter)
       ConditionalCommand.new conditional, command
-    elsif line[0..2] == "[X]"
-      command = GotoRoom.parse?("@#{room.next}", room, enterpreter)
-      ConditionalCommand.new Conditional.parse("$_VISITS_TO_#{room.number} == #{line[3..-1]}"), command
     else
       false
     end
   end
 
   private
-  
+
   def self.both_conditions(one, other)
     length = one.length < 10 ? "0#{one.length}" : one.length
     "+#{length}#{one}#{other}"
   end
-  
+
 end

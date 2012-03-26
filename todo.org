@@ -7,7 +7,7 @@
 ** DONE room.rb
 ** DONE room_loader.rb
 ** DONE timed_jump_coordinator.rb
-* Commands [24/30]
+* Commands [25/30]
 ** DONE activate_saving.rb
 ** DONE add_deed.rb
 ** DONE add_flag.rb
@@ -32,7 +32,7 @@
 ** DONE save_command.rb
 ** DONE procedure_call.rb
 ** DONE comments
-** TODO conditional_goto.rb
+** DONE conditional_goto.rb
 ** TODO conditional_command.rb
 ** TODO alternatives.rb
 ** TODO alternatives_from_other.rb
@@ -46,8 +46,33 @@
 ** TODO timed_jump_coordinator scanner etter delayed calls med regexp
 ** TODO timed_jump_coordinator finner room_references med regexp
 ** TODO timed_jump_coordinator finner romreferanser i alternativer selv
-* Conditionals [0/1]
+* Conditionals [0/3]
 ** TODO Port fra intelliadv
+** TODO visit count
+   def test_should_jump_on_visit_count
+     room = ['[X]3', '623'].extend(Room)
+     room.number = 453
+     command = setup_jump_mocks room
+     assert_equal(expected_code_for_jump_on_visit_count, command.code)
+   end
+
+   def expected_code_for_jump_on_visit_count
+     [
+       'if ($this->con($this->receiver->get_detail("\$_VISITS_TO_453") == 3)) {',
+       '  $this->receiver->room_number_changed(623);',
+       '  $this->execute_room_623();',
+       '  return;',
+       '}'
+     ]
+   end
+
+
+
+    elsif line[0..2] == "[X]"
+      command = GotoRoom.parse?("@#{room.next}", room, enterpreter)
+      ConditionalCommand.new Conditional.parse("$_VISITS_TO_#{room.number} == #{line[3..-1]}"), command
+
+** TODO Conditional.parse i conditional_goto + both_conditions
 * Ekstra problemer [0/3]
 ** TODO Hashcoding av Saved Commands vil bli helt feil.
    Løsningen er å manuelt endre oppslagene i hashcodefile
