@@ -20,10 +20,10 @@ class ChangeTracker
 
   def find_changed_rooms
     if File.exists? @state_file
-      `find #{@source_directory} -newer #{@state_file} | grep -v .svn | grep -v gitte-krav.txt | grep -v notat.txt | grep .txt`
+      `find #{@source_directory} -newer #{@state_file} | grep -v .svn | grep .adv`
     else
-      `find #{@source_directory} | grep -v .svn | grep -v last_compile.txt | grep .txt`
-    end.map { |line| $1.to_i if line =~ /A(\d+)\.txt$/ }
+      `find #{@source_directory} | grep -v .svn | grep -v last_compile.txt | grep .adv`
+    end.map { |line| $1.to_i if line =~ /A(\d+)\.adv$/ }
   end
 
 end
