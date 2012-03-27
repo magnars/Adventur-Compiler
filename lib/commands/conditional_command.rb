@@ -1,10 +1,12 @@
 require 'conditional'
 
 class ConditionalCommand
+  attr_reader :command
+
   def initialize(conditional, command)
     @conditional, @command = conditional, command
   end
-  
+
   def self.parse?(line, room, enterpreter)
     if line.sub!(/^\[\!\]/, "")
       room.next
@@ -16,7 +18,7 @@ class ConditionalCommand
       false
     end
   end
-  
+
   def code
     if @conditional.is_a? TrueConditional
       @command.code
