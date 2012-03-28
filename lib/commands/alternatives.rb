@@ -43,7 +43,7 @@ class Alternatives
     end
     room.next if room.peek == "" # support blank line between alternatives
     alternative = Alternative.new(text, room_number)
-    ConditionalCommand.new(Conditional.parse(condition), alternative)
+    ConditionalCommand.new(Conditional.parse(condition, room.number), alternative)
   end
 
   def code

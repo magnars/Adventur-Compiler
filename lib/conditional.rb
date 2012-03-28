@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 class Conditional
   def self.conditionals
     [
@@ -11,21 +12,22 @@ class Conditional
      NotThisWithoutThatConditional,
      DateConditional,
      KongerupiConditional,
+     VisitConditional,
      ValueConditional,
      AlternativeNumberConditional,
      FlagConditional
     ]
   end
 
-  def self.parse(node)
+  def self.parse(node, room_number = 0)
     conditionals.inject(false) do |conditional, kind|
-      conditional = kind.parse?(node) and break conditional
+      conditional = kind.parse?(node, room_number) and break conditional
     end
   end
 end
 
 class TrueConditional
-  def self.parse?(node)
+  def self.parse?(node, room_number)
     if node === "-" then
       new
     else
@@ -39,7 +41,7 @@ class TrueConditional
 end
 
 class DateConditional
-  def self.parse?(node)
+  def self.parse?(node, room_number)
     if node =~ /^DATO(\d\d\d\d)$/ then
       new $1
     else
@@ -57,7 +59,7 @@ class DateConditional
 end
 
 class FlagConditional
-  def self.parse?(node)
+  def self.parse?(node, room_number)
     new node
   end
 
@@ -71,9 +73,9 @@ class FlagConditional
 end
 
 class NotConditional
-  def self.parse?(node)
+  def self.parse?(node, room_number)
     if node[0] == :not then
-      NotConditional.new(Conditional.parse(node[1]))
+      NotConditional.new(Conditional.parse(node[1], room_number))
     else
       false
     end
@@ -89,10 +91,10 @@ class NotConditional
 end
 
 class AndConditional
-  def self.parse?(node)
+  def self.parse?(node, room_number)
     if node[0] == :and then
-      one = Conditional.parse(node[1])
-      other = Conditional.parse(node[2])
+      one = Conditional.parse(node[1], room_number)
+      other = Conditional.parse(node[2], room_number)
       instance = new
       instance << one
       instance << other
@@ -121,10 +123,10 @@ class AndConditional
 end
 
 class AllConditional
-  def self.parse?(node)
+  def self.parse?(node, room_number)
     if node[0] == :all then
       instance = AndConditional.new
-      node[1..-1].each { |n| instance << Conditional.parse(n) }
+      node[1..-1].each { |n| instance << Conditional.parse(n, room_number) }
       instance
     else
       false
@@ -133,10 +135,10 @@ class AllConditional
 end
 
 class OrConditional
-  def self.parse?(node)
+  def self.parse?(node, room_number)
     if node[0] == :or then
-      one = Conditional.parse(node[1])
-      other = Conditional.parse(node[2])
+      one = Conditional.parse(node[1], room_number)
+      other = Conditional.parse(node[2], room_number)
       instance = new
       instance << one
       instance << other
@@ -165,10 +167,10 @@ class OrConditional
 end
 
 class SomeConditional
-  def self.parse?(node)
+  def self.parse?(node, room_number)
     if node[0] == :some then
       instance = OrConditional.new
-      node[1..-1].each { |n| instance << Conditional.parse(n) }
+      node[1..-1].each { |n| instance << Conditional.parse(n, room_number) }
       instance
     else
       false
@@ -177,10 +179,10 @@ class SomeConditional
 end
 
 class ThisButNotThatConditional
-  def self.parse?(node)
+  def self.parse?(node, room_number)
     if node[0] == :this_but_not_that then
-      this = Conditional.parse(node[1])
-      that = Conditional.parse(node[2])
+      this = Conditional.parse(node[1], room_number)
+      that = Conditional.parse(node[2], room_number)
       new this, that
     else
       false
@@ -197,10 +199,10 @@ class ThisButNotThatConditional
 end
 
 class NotThisWithoutThatConditional
-  def self.parse?(node)
+  def self.parse?(node, room_number)
     if node[0] == :not_this_without_that then
-      this = Conditional.parse(node[1])
-      that = Conditional.parse(node[2])
+      this = Conditional.parse(node[1], room_number)
+      that = Conditional.parse(node[2], room_number)
       new this, that
     else
       false
@@ -217,7 +219,7 @@ class NotThisWithoutThatConditional
 end
 
 class AlternativeNumberConditional
-  def self.parse?(node)
+  def self.parse?(node, room_number)
     if node =~ /^\*(\d+)\*$/ then
       new $1
     else
@@ -235,7 +237,7 @@ class AlternativeNumberConditional
 end
 
 class ValueConditional
-  def self.parse?(node)
+  def self.parse?(node, room_number)
     if node =~ /^(.*) (<|<=|==|!=|>=|>) (.*)/ then
       new $1, $2, $3
     elsif node =~ /^(\$[\S]+|\-?\d+)$/ then
@@ -274,9 +276,19 @@ class ValueConditional
 end
 
 class KongerupiConditional
-  def self.parse?(node)
+  def self.parse?(node, room_number)
     if node =~ /^kr\.(\d+)$/ then
       ValueConditional.new "$_KONGERUPI", ">=", $1
+    else
+      false
+    end
+  end
+end
+
+class VisitConditional
+  def self.parse?(node, room_number)
+    if node =~ /^(\d+)\. besøk$/ then
+      ValueConditional.new "$_VISITS_TO_#{room_number}", "==", $1
     else
       false
     end

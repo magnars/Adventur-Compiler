@@ -47,9 +47,9 @@
 ** TODO timed_jump_coordinator scanner etter delayed calls med regexp
 ** TODO timed_jump_coordinator finner room_references med regexp
 ** TODO timed_jump_coordinator finner romreferanser i alternativer selv
-* Conditionals [3/4]
+* Conditionals [4/4]
 ** DONE Port fra intelliadv
-** TODO visit count
+** DONE visit count
    def test_should_jump_on_visit_count
      room = ['[X]3', '623'].extend(Room)
      room.number = 453
