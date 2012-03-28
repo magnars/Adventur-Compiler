@@ -1,4 +1,6 @@
 # -*- coding: utf-8 -*-
+require "cond_tree"
+
 class Conditional
   def self.conditionals
     [
@@ -19,7 +21,11 @@ class Conditional
     ]
   end
 
-  def self.parse(node, room_number = 0)
+  def self.parse(string, room_number)
+    build(CondTree.parse(string), room_number)
+  end
+
+  def self.build(node, room_number = 0)
     conditionals.inject(false) do |conditional, kind|
       conditional = kind.parse?(node, room_number) and break conditional
     end
@@ -75,7 +81,7 @@ end
 class NotConditional
   def self.parse?(node, room_number)
     if node[0] == :not then
-      NotConditional.new(Conditional.parse(node[1], room_number))
+      NotConditional.new(Conditional.build(node[1], room_number))
     else
       false
     end
@@ -93,8 +99,8 @@ end
 class AndConditional
   def self.parse?(node, room_number)
     if node[0] == :and then
-      one = Conditional.parse(node[1], room_number)
-      other = Conditional.parse(node[2], room_number)
+      one = Conditional.build(node[1], room_number)
+      other = Conditional.build(node[2], room_number)
       instance = new
       instance << one
       instance << other
@@ -126,7 +132,7 @@ class AllConditional
   def self.parse?(node, room_number)
     if node[0] == :all then
       instance = AndConditional.new
-      node[1..-1].each { |n| instance << Conditional.parse(n, room_number) }
+      node[1..-1].each { |n| instance << Conditional.build(n, room_number) }
       instance
     else
       false
@@ -137,8 +143,8 @@ end
 class OrConditional
   def self.parse?(node, room_number)
     if node[0] == :or then
-      one = Conditional.parse(node[1], room_number)
-      other = Conditional.parse(node[2], room_number)
+      one = Conditional.build(node[1], room_number)
+      other = Conditional.build(node[2], room_number)
       instance = new
       instance << one
       instance << other
@@ -170,7 +176,7 @@ class SomeConditional
   def self.parse?(node, room_number)
     if node[0] == :some then
       instance = OrConditional.new
-      node[1..-1].each { |n| instance << Conditional.parse(n, room_number) }
+      node[1..-1].each { |n| instance << Conditional.build(n, room_number) }
       instance
     else
       false
@@ -181,8 +187,8 @@ end
 class ThisButNotThatConditional
   def self.parse?(node, room_number)
     if node[0] == :this_but_not_that then
-      this = Conditional.parse(node[1], room_number)
-      that = Conditional.parse(node[2], room_number)
+      this = Conditional.build(node[1], room_number)
+      that = Conditional.build(node[2], room_number)
       new this, that
     else
       false
@@ -201,8 +207,8 @@ end
 class NotThisWithoutThatConditional
   def self.parse?(node, room_number)
     if node[0] == :not_this_without_that then
-      this = Conditional.parse(node[1], room_number)
-      that = Conditional.parse(node[2], room_number)
+      this = Conditional.build(node[1], room_number)
+      that = Conditional.build(node[2], room_number)
       new this, that
     else
       false

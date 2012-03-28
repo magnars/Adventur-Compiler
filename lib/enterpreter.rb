@@ -2,7 +2,7 @@ require 'commands/plain_text'
 require 'commands/add_flag'
 require 'commands/remove_flag'
 require 'commands/conditional_command'
-require 'commands/command_bundle'
+require 'commands/if_statement'
 require 'commands/alternatives'
 require 'commands/goto_room'
 require 'commands/alternatives_from_other'
@@ -46,7 +46,7 @@ class Enterpreter
       Alternatives,
       RemoveAlternatives,
       ReinstateAlternatives,
-      CommandBundle,
+      IfStatement,
       ConditionalCommand,
       RemoveFlag, AddFlag,
       AddKongerupi,

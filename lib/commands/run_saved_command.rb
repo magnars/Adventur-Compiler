@@ -1,4 +1,4 @@
-require 'commands/command_bundle'
+require 'commands/if_statement'
 require 'commands/conditional_command'
 require 'conditional'
 require 'room'
@@ -13,18 +13,18 @@ class RunSavedCommand
         command = enterpreter.current_command([content.text.clone].extend(Room))
         ConditionalCommand.new(conditional, command)
       end
-      new CommandBundle.new(commands)
+      new commands
     else
       false
     end
   end
 
-  def initialize(command)
-    @command = command
+  def initialize(commands)
+    @commands = commands
   end
 
   def code
-    @command.code
+    @commands.map { |c| c.code }.flatten
   end
 
 end
