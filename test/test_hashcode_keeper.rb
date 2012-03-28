@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 require 'test/unit'
 require 'hashcode_keeper'
 
@@ -18,18 +19,18 @@ class HashcodeKeeperTestCase < Test::Unit::TestCase
     assert_equal 1, keeper.contentlist_for("VRAK").size
     assert_equal [987, 654, 321], keeper.contentlist_for("VRAK").first.codes
   end
-  
+
   def test_should_save_hashcodefile
     keeper = HashcodeKeeper.new hashcodefile
     keeper.save "hck_test.txt"
     assert_equal hashcodefile, IO.readlines("hck_test.txt").to_s
   end
-  
+
   def test_should_add_codes_to_new_content_when_saving
     @keeper.save "hck_test.txt"
     assert_equal "]C[GI_URTE\n()FIKK-INGEFÆR\n-1954996374\n\n", IO.readlines("hck_test.txt").to_s
   end
-  
+
   def hashcodefile
     <<-FILE
 ]C[KRAV
@@ -61,7 +62,7 @@ FILE
     assert_equal "()FIKK-INGEFÆR", content.text
     assert_equal [-1954996374], content.codes
   end
-  
+
   def test_should_keep_variables_separated
     @keeper.add("GI_URTE", "$URTE:BEKMYRT++")
     @keeper.add("GI_URTE_HOPP", "@1234")

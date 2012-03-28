@@ -88,4 +88,10 @@ class ConditionalTestCase < Test::Unit::TestCase
     assert_equal('$this->receiver->get_detail("\$_KONGERUPI") >= 12', Conditional.parse("kr.12").code)
   end
 
+  # def test_should_parse_visits
+  #   assert_equal('$this->receiver->get_detail("\$_VISITS_TO_453") == 3)',
+  #                Conditional.parse("3. besøk"))
+  # end
+
+
 end
