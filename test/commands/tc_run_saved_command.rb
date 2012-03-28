@@ -16,10 +16,10 @@ class CommandsRunSavedCommandTestCase < Test::Unit::TestCase
     @keeper.stubs(:contentlist_for).returns([content_mock("contents1", [-245371941]), content_mock("contents2", [-245371940, 123456778])])
     @enterpreter.stubs(:current_command).returns(PlainText.new("contents1"), PlainText.new("contents2"))
     command = RunSavedCommand.parse?(@room.current, @room, @enterpreter)
-    assert_equal(['if ($this->con($this->receiver->get_detail("]C[TEST") == -245371941)) {',
+    assert_equal(['if ($this->con(($this->receiver->get_detail("]C[TEST") == -245371941))) {',
                   '  $this->receiver->write("contents1");',
                   '}',
-                  'if ($this->con($this->receiver->get_detail("]C[TEST") == -245371940 || $this->receiver->get_detail("]C[TEST") == 123456778)) {',
+                  'if ($this->con(($this->receiver->get_detail("]C[TEST") == -245371940 || $this->receiver->get_detail("]C[TEST") == 123456778))) {',
                   '  $this->receiver->write("contents2");',
                   '}'
                  ], command.code)

@@ -32,8 +32,6 @@ class ConditionalCommand
   def code
     if @conditional.is_a? TrueConditional
       @command.code
-    elsif @conditional.is_a? FalseConditional
-      []
     else
       [ "if ($this->con(#{@conditional.code})) {",
         @command.code.map { |line| "  #{line}" },

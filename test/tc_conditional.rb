@@ -1,16 +1,20 @@
+# -*- coding: utf-8 -*-
 require 'test/unit'
 require 'conditional'
 
 class ConditionalTestCase < Test::Unit::TestCase
 
   def test_should_parse_true
-    assert_instance_of(TrueConditional, Conditional.parse("-"))
     assert_equal("true", Conditional.parse("-").code)
   end
 
-  def test_should_parse_false
-    assert_instance_of(FalseConditional, Conditional.parse(")(-"))
-    assert_equal("false", Conditional.parse(")(-").code)
+  def test_should_know_dates
+    assert_equal('date("H") > 4 && date("dm") == "3110"', Conditional.parse("DATO3110").code)
+    assert_equal('date("H") > 4 && date("dm") == "0505"', Conditional.parse("DATO0505").code)
+  end
+
+  def test_should_parse_alternative_number_conditionals
+    assert_equal('$visible_alternatives <= 0', Conditional.parse("*0*").code)
   end
 
   def test_should_parse_flags
@@ -20,23 +24,17 @@ class ConditionalTestCase < Test::Unit::TestCase
 
   def test_should_parse_not_statements
     assert_equal('!($this->receiver->has_flag("FLAG"))',
-                 Conditional.parse(")(FLAG").code)
+                 Conditional.parse([:not, "FLAG"]).code)
   end
 
   def test_should_parse_and_statements
-    assert_equal('($this->receiver->has_flag("FLAG") && $this->receiver->has_flag("REQUIREMENT"))', 
-                 Conditional.parse("+04FLAGREQUIREMENT").code)
+    assert_equal('($this->receiver->has_flag("FLAG") && $this->receiver->has_flag("REQUIREMENT"))',
+                 Conditional.parse([:and, "FLAG", "REQUIREMENT"]).code)
   end
 
-  def test_should_parse_statements_with_norwegian_uppercase_chars
-    assert_equal('($this->receiver->has_flag("PØLSE") && $this->receiver->has_flag("ÆLG"))', 
-                 Conditional.parse("+05PØLSEÆLG").code)
-    assert_equal('($this->receiver->has_flag("PØØLSE") && $this->receiver->has_flag("ÆLG"))', 
-                 Conditional.parse("+06PØØLSEÆLG").code)
-  end
-
-  def test_should_parse_alternative_number_conditionals
-    assert_equal('$visible_alternatives <= 0', Conditional.parse("*0*").code)
+  def test_should_parse_or_statements
+    assert_equal('($this->receiver->has_flag("FLAG") || $this->receiver->has_flag("REQUIREMENT"))',
+                 Conditional.parse([:or, "FLAG", "REQUIREMENT"]).code)
   end
 
   def test_should_parse_values
@@ -54,13 +52,13 @@ class ConditionalTestCase < Test::Unit::TestCase
   def test_should_inject_dates
     assert_equal('date("m") == 12', Conditional.parse("$_MND == 12").code)
     assert_equal('date("H") > 4 && date("d") < 24', Conditional.parse("$_DATO < 24").code)
-    assert_equal('(date("m") == 12 && date("H") > 4 && date("d") < 24)', Conditional.parse("+11$_MND == 12$_DATO < 24").code)
+    assert_equal('(date("m") == 12 && date("H") > 4 && date("d") < 24)', Conditional.parse([:and, "$_MND == 12", "$_DATO < 24"]).code)
   end
 
   def test_should_parse_mixed
-    assert_equal('($this->receiver->has_flag("PØLSE") && ($this->receiver->get_detail("\$TIDSPUNKT") > 7 && $this->receiver->has_flag("ÆLG")))', 
-                 Conditional.parse("+05PØLSE+14$TIDSPUNKT > 7ÆLG").code)
-    
+    assert_equal('($this->receiver->has_flag("PØLSE") && ($this->receiver->get_detail("\$TIDSPUNKT") > 7 && $this->receiver->has_flag("ÆLG")))',
+                 Conditional.parse([:and, "PØLSE", [:and, "$TIDSPUNKT > 7", "ÆLG"]]).code)
+
   end
 
   def test_should_allow_numbers
@@ -69,11 +67,6 @@ class ConditionalTestCase < Test::Unit::TestCase
 
   def test_should_know_kongerupi
     assert_equal('$this->receiver->get_detail("\$_KONGERUPI") >= 12', Conditional.parse("kr.12").code)
-  end
-  
-  def test_should_know_dates
-    assert_equal('date("H") > 4 && date("dm") == "3110"', Conditional.parse("DATO3110").code)
-    assert_equal('date("H") > 4 && date("dm") == "0505"', Conditional.parse("DATO0505").code)
   end
 
 end

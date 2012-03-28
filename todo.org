@@ -47,8 +47,8 @@
 ** TODO timed_jump_coordinator scanner etter delayed calls med regexp
 ** TODO timed_jump_coordinator finner room_references med regexp
 ** TODO timed_jump_coordinator finner romreferanser i alternativer selv
-* Conditionals [0/3]
-** TODO Port fra intelliadv
+* Conditionals [2/4]
+** DONE Port fra intelliadv
 ** TODO visit count
    def test_should_jump_on_visit_count
      room = ['[X]3', '623'].extend(Room)
@@ -89,7 +89,8 @@
      '}']
   end
 
-** TODO Conditional.parse i conditional_goto + both_conditions
+** DONE Conditional.parse i conditional_goto + both_conditions
+** TODO CondTree.parse av $VALUE == 12
 * Ekstra problemer [0/3]
 ** TODO Hashcoding av Saved Commands vil bli helt feil.
    Løsningen er å manuelt endre oppslagene i hashcodefile

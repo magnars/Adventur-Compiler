@@ -1,33 +1,27 @@
 require 'commands/conditional_command'
 require 'commands/goto_room'
 require 'conditional'
+require 'cond_tree'
 
 class ConditionalGoto
   def self.parse?(line, room, enterpreter)
     if line =~ /^@(\d+) \?\?$/
-      conditional = Conditional.parse(")(nr#{$1}")
+      conditional = Conditional.parse([:not, "nr#{$1}"])
       command = GotoRoom.parse?("@#{$1}", room, enterpreter)
       ConditionalCommand.new conditional, command
     elsif line =~ /^@(\d+) \?\? (.+)$/
-      implicit_condition = ")(nr#{$1}"
-      explicit_condition = $2
+      implicit_condition = [:not, "nr#{$1}"]
+      explicit_condition = CondTree.parse($2)
       if explicit_condition === "-"
         conditional = Conditional.parse(implicit_condition)
       else
-        conditional = Conditional.parse(both_conditions(implicit_condition, explicit_condition))
+        conditional = Conditional.parse([:and, implicit_condition, explicit_condition])
       end
       command = GotoRoom.parse?("@#{$1}", room, enterpreter)
       ConditionalCommand.new conditional, command
     else
       false
     end
-  end
-
-  private
-
-  def self.both_conditions(one, other)
-    length = one.length < 10 ? "0#{one.length}" : one.length
-    "+#{length}#{one}#{other}"
   end
 
 end

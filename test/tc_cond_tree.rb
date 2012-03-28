@@ -64,6 +64,11 @@ class CondTreeTestCase < Test::Unit::TestCase
     assert_equal([:and, "TØY1", "TØY2"], CondTree.parse("TØY1 og TØY2"))
   end
 
+  def test_parse_and_more
+    assert_equal([:and, "TØY0", [:and, "TØY1", "TØY2"]],
+                 CondTree.parse("TØY0 og TØY1 og TØY2"))
+  end
+
   def test_parse_parens
     assert_equal([:and, [:not, "PÅ1"], [:all, "PÅ2", "PÅ3"]],
                  CondTree.parse("(ikke PÅ1) og (både PÅ2 og PÅ3)"))
