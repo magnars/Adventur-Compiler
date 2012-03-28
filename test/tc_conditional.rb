@@ -32,9 +32,29 @@ class ConditionalTestCase < Test::Unit::TestCase
                  Conditional.parse([:and, "FLAG", "REQUIREMENT"]).code)
   end
 
+  def test_should_parse_all_statements
+    assert_equal('($this->receiver->has_flag("FLAG") && $this->receiver->has_flag("JAPP") && $this->receiver->has_flag("BANAN"))',
+                 Conditional.parse([:all, "FLAG", "JAPP", "BANAN"]).code)
+  end
+
   def test_should_parse_or_statements
     assert_equal('($this->receiver->has_flag("FLAG") || $this->receiver->has_flag("REQUIREMENT"))',
                  Conditional.parse([:or, "FLAG", "REQUIREMENT"]).code)
+  end
+
+  def test_should_parse_some_statements
+    assert_equal('($this->receiver->has_flag("FLAG") || $this->receiver->has_flag("JAPP") || $this->receiver->has_flag("BANAN"))',
+                 Conditional.parse([:some, "FLAG", "JAPP", "BANAN"]).code)
+  end
+
+  def test_should_parse_this_but_not_that_statements
+    assert_equal('($this->receiver->has_flag("FLAG") && !$this->receiver->has_flag("REQUIREMENT"))',
+                 Conditional.parse([:this_but_not_that, "FLAG", "REQUIREMENT"]).code)
+  end
+
+  def test_should_parse_not_this_without_that_statements
+    assert_equal('(!$this->receiver->has_flag("FLAG") || $this->receiver->has_flag("REQUIREMENT"))',
+                 Conditional.parse([:not_this_without_that, "FLAG", "REQUIREMENT"]).code)
   end
 
   def test_should_parse_values
@@ -58,7 +78,6 @@ class ConditionalTestCase < Test::Unit::TestCase
   def test_should_parse_mixed
     assert_equal('($this->receiver->has_flag("PØLSE") && ($this->receiver->get_detail("\$TIDSPUNKT") > 7 && $this->receiver->has_flag("ÆLG")))',
                  Conditional.parse([:and, "PØLSE", [:and, "$TIDSPUNKT > 7", "ÆLG"]]).code)
-
   end
 
   def test_should_allow_numbers

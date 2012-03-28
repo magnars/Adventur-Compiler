@@ -1,6 +1,24 @@
 class Conditional
+  def self.conditionals
+    [
+     TrueConditional,
+     NotConditional,
+     AndConditional,
+     AllConditional,
+     OrConditional,
+     SomeConditional,
+     ThisButNotThatConditional,
+     NotThisWithoutThatConditional,
+     DateConditional,
+     KongerupiConditional,
+     ValueConditional,
+     AlternativeNumberConditional,
+     FlagConditional
+    ]
+  end
+
   def self.parse(node)
-    [TrueConditional, NotConditional, AndConditional, OrConditional, DateConditional, KongerupiConditional, ValueConditional, AlternativeNumberConditional, FlagConditional].inject(false) do |conditional, kind|
+    conditionals.inject(false) do |conditional, kind|
       conditional = kind.parse?(node) and break conditional
     end
   end
@@ -75,20 +93,43 @@ class AndConditional
     if node[0] == :and then
       one = Conditional.parse(node[1])
       other = Conditional.parse(node[2])
-      new one, other
+      instance = new
+      instance << one
+      instance << other
+      instance
     else
       false
     end
   end
 
-  def initialize(one, other)
-    @one, @other = one, other
+  def initialize
+    @options = []
+  end
+
+  def add(conditional)
+    @options << conditional
+  end
+
+  def <<(conditional)
+    add(conditional)
   end
 
   def code
-    "(#{@one.code} && #{@other.code})"
+    ops = @options.map { |o| o.code }.join(" && ")
+    "(#{ops})"
   end
+end
 
+class AllConditional
+  def self.parse?(node)
+    if node[0] == :all then
+      instance = AndConditional.new
+      node[1..-1].each { |n| instance << Conditional.parse(n) }
+      instance
+    else
+      false
+    end
+  end
 end
 
 class OrConditional
@@ -105,7 +146,6 @@ class OrConditional
     end
   end
 
-
   def initialize
     @options = []
   end
@@ -121,6 +161,58 @@ class OrConditional
   def code
     ops = @options.map { |o| o.code }.join(" || ")
     "(#{ops})"
+  end
+end
+
+class SomeConditional
+  def self.parse?(node)
+    if node[0] == :some then
+      instance = OrConditional.new
+      node[1..-1].each { |n| instance << Conditional.parse(n) }
+      instance
+    else
+      false
+    end
+  end
+end
+
+class ThisButNotThatConditional
+  def self.parse?(node)
+    if node[0] == :this_but_not_that then
+      this = Conditional.parse(node[1])
+      that = Conditional.parse(node[2])
+      new this, that
+    else
+      false
+    end
+  end
+
+  def initialize(this, that)
+    @this, @that = this, that
+  end
+
+  def code
+    "(#{@this.code} && !#{@that.code})"
+  end
+end
+
+class NotThisWithoutThatConditional
+  def self.parse?(node)
+    if node[0] == :not_this_without_that then
+      this = Conditional.parse(node[1])
+      that = Conditional.parse(node[2])
+      new this, that
+    else
+      false
+    end
+  end
+
+  def initialize(this, that)
+    @this, @that = this, that
+  end
+
+  def code
+    "(!#{@this.code} || #{@that.code})"
   end
 end
 
