@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 require 'test/unit'
 require 'rubygems'
 require 'mocha'
@@ -27,7 +28,7 @@ class EnterpreterTestCase < Test::Unit::TestCase
   end
 
   def test_should_properly_indent_multiline_code_from_commands
-    mock_room(["line1", "[!]TEST", "line2", "line3"])
+    mock_room(["line1", "line2 ? TEST", "line3"])
     assert_equal(expected_code_for_conditional, @enterpreter.enterpret)
   end
 
@@ -37,7 +38,7 @@ class EnterpreterTestCase < Test::Unit::TestCase
     @enterpreter.define_function("procedure_call_to_531", [PlainText.new("line4")])
     assert_equal(expected_code_for_added_functions, @enterpreter.enterpret)
   end
-  
+
   def test_should_allow_checking_if_a_function_exists
     assert(!@enterpreter.has_function("alternatives_from_844"), "should not have function yet")
     @enterpreter.register_function("alternatives_from_844")
@@ -52,9 +53,9 @@ class EnterpreterTestCase < Test::Unit::TestCase
     assert_equal @hashcode_keeper, @enterpreter.hashcode_keeper
     assert_equal @hashcode_keeper, @enterpreter.hashcode_keeper # test cache
   end
-  
+
   def test_should_find_multiple_C_command_lines_in_one_room
-    @room_loader.expects(:all_room_numbers).returns([1])    
+    @room_loader.expects(:all_room_numbers).returns([1])
     mock_room(["line1", "]C[TEST", "contents", "line2", "]C[TEST", "contents2", "line3"])
     @hashcode_keeper.expects(:save)
     assert_equal @hashcode_keeper, @enterpreter.hashcode_keeper
@@ -62,7 +63,7 @@ class EnterpreterTestCase < Test::Unit::TestCase
     assert_equal "contents", list.first.text
     assert_equal "contents2", list.last.text
   end
-  
+
   def test_should_find_good_and_evil_deeds
     @room_loader.expects(:all_room_numbers).returns([1])
     mock_room(["Hei", "---", '"Slemt altså"', "Hallo", "+++", "Snilt også", "+++", "Mer snilt", "+++", "Mer snilt", "Hadet"])
@@ -82,11 +83,11 @@ class EnterpreterTestCase < Test::Unit::TestCase
   end
 
   private
-  
+
   def mock_room(lines)
     @room_loader.stubs(:get).returns(lines.extend(Room))
   end
-  
+
   def expected_code_for_three_lines
     <<-EXPECTED
 public function execute() {

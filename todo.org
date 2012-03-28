@@ -7,7 +7,7 @@
 ** DONE room.rb
 ** DONE room_loader.rb
 ** DONE timed_jump_coordinator.rb
-* Commands [27/30]
+* Commands [28/31]
 ** DONE activate_saving.rb
 ** DONE add_deed.rb
 ** DONE add_flag.rb
@@ -35,7 +35,8 @@
 ** DONE conditional_goto.rb
 ** DONE alternatives_from_other.rb
 ** DONE alternatives.rb
-** TODO conditional_command.rb
+** DONE conditional_command.rb
+** TODO conditional_commands
 ** TODO command_bundle.rb
 ** TODO sentence_with_variable.rb
 * Commands som gjemmer seg [0/5]
@@ -66,11 +67,27 @@
      ]
    end
 
-
+   ----
 
     elsif line[0..2] == "[X]"
       command = GotoRoom.parse?("@#{room.next}", room, enterpreter)
       ConditionalCommand.new Conditional.parse("$_VISITS_TO_#{room.number} == #{line[3..-1]}"), command
+
+   ----
+
+   def test_should_parse_visit_count_conditional
+     room = ["[X!]3", "command"].extend(Room)
+     room.number = 5244
+     (enterpreter = mock('enterpreter')).stubs(:current_command).returns(PlainText.new("command"))
+     conditional = ConditionalCommand.parse?(room.current, room, enterpreter)
+     assert_equal(expected_code_for_visit_count, conditional.code)
+   end
+
+  def expected_code_for_visit_count
+    ['if ($this->con($this->receiver->get_detail("\$_VISITS_TO_5244") == 3)) {',
+     '  $this->receiver->write("command");',
+     '}']
+  end
 
 ** TODO Conditional.parse i conditional_goto + both_conditions
 * Ekstra problemer [0/3]
