@@ -64,6 +64,18 @@ class CondTreeTestCase < Test::Unit::TestCase
     assert_equal([:and, "TØY1", "TØY2"], CondTree.parse("TØY1 og TØY2"))
   end
 
+  def test_parse_values
+    assert_equal("$VALUE", CondTree.parse("$VALUE"))
+    assert_equal("$VALUE >= 12", CondTree.parse("$VALUE >= 12"))
+    assert_equal("$VALUE != 4", CondTree.parse("$VALUE != 4"))
+    assert_equal("23 < $SECOND_VALUE", CondTree.parse("23 < $SECOND_VALUE"))
+    assert_equal("$VALUE == $SECOND_VALUE", CondTree.parse("$VALUE == $SECOND_VALUE"))
+    assert_equal("$HØYBORG < -531243", CondTree.parse("$HØYBORG < -531243"))
+    assert_equal("$TIDSPUNKT > 2 + $HØRTE_SISTE_RYKTE", CondTree.parse("$TIDSPUNKT > 2 + $HØRTE_SISTE_RYKTE"))
+    assert_equal("$TIDSPUNKT > $HØRTE_SISTE_RYKTE + 2", CondTree.parse("$TIDSPUNKT > $HØRTE_SISTE_RYKTE + 2"))
+    assert_equal("$VALUE + 7 >= 12", CondTree.parse("$VALUE + 7 >= 12"))
+  end
+
   def test_parse_and_more
     assert_equal([:and, "TØY0", [:and, "TØY1", "TØY2"]],
                  CondTree.parse("TØY0 og TØY1 og TØY2"))

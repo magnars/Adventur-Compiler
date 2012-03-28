@@ -32,6 +32,7 @@ class CondTree
   end
 
   def self.parse_single(s, top)
+    return parse_value(s, top) if s =~ value_regexp
     return parse_flag(s, top) if s =~ flag_regexp
     return parse_all(s, top) if s =~ all_regexp
     return parse_some(s, top) if s =~ some_regexp
@@ -41,7 +42,8 @@ class CondTree
   end
 
   def self.next_is_single_node(s)
-    (s =~ flag_regexp) or
+    (s =~ value_regexp) or
+      (s =~ flag_regexp) or
       (s =~ all_regexp) or
       (s =~ some_regexp) or
       (s.start_with? "(") or
@@ -60,6 +62,12 @@ class CondTree
 
   def self.parse_flag(s, top)
     match = get_flag(s)
+    req_parse(subs(s, size(match)),
+              top.push(match))
+  end
+
+  def self.parse_value(s, top)
+    match = get_value(s)
     req_parse(subs(s, size(match)),
               top.push(match))
   end
@@ -130,6 +138,14 @@ class CondTree
 
   def self.all_regexp()
     /^både (?:\$?[A-ZÆØÅ0-9.*_-]+(?:, )?)+ og \$?[A-ZÆØÅ0-9.*_-]+/
+  end
+
+  def self.get_value(s)
+    get_leading("value", value_regexp, s)
+  end
+
+  def self.value_regexp()
+    /^(?:[0-9]+|\$?[A-ZÆØÅ0-9.*_-]+)(?: [+*\/-] (?:[0-9]+|\$?[A-ZÆØÅ0-9.*_-]+))* [!<>=]=? (?:[0-9]+|\$?[A-ZÆØÅ0-9.*_-]+)(?: [+*\/-] (?:[0-9]+|\$?[A-ZÆØÅ0-9.*_-]+))*/
   end
 
   def self.get_flag(s)
