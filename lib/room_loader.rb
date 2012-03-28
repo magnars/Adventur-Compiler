@@ -8,7 +8,7 @@ class RoomLoader
   def get(room_number)
     abort "Tried loading room #{room_number} that does not exist" unless room_exists?(room_number)
     @@last_loaded_room_number = room_number
-    room = IO.read(path_to(room_number)).map { |line| line.gsub(/\s*$/, "") }.extend(Room)
+    room = IO.read(path_to(room_number)).map { |line| line.gsub(/\s*$/, "").gsub(/^\s*/, "") }.extend(Room)
     room.number = room_number
     room
   end

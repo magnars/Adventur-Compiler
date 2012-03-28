@@ -48,7 +48,7 @@ class RoomLoaderTestCase < Test::Unit::TestCase
   end
 
   def test_should_load_rooms_from_given_source
-    assert_equal(['Line 1 of room #0', ' Line 2 of room #0'], @loader.get(0))
+    assert_equal(['Line 1 of room #0', 'Line 2 of room #0'], @loader.get(0))
   end
 
 end
