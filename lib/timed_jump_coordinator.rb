@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 require 'room'
 
 # For å lagre den massive jobben det er å finne alle kandidater, holder det å:
@@ -29,13 +30,11 @@ class TimedJumpCoordinator
 
   def generate_code_for(candidates)
     code = [
-      '[!]$_CALL_DELAY > 0',
-      '{',
-      '$_CALL_DELAY--',
+            '? $_CALL_DELAY > 0 {',
+            '  $_CALL_DELAY--',
     ]
     candidates.each do |number|
-      code << "[!]+17$_CALL_DELAY == 0$_DELAYED_CALL == #{number}"
-      code << "(@)#{number}"
+      code << "  (@)#{number} ? $_CALL_DELAY == 0 og $_DELAYED_CALL == #{number}"
     end
     code << '}'
     code
@@ -107,7 +106,7 @@ class TimedJumpCoordinator
   def find_all_procedure_calls
     procedure_calls = []
     @room_loader.all_room_numbers.each do |caller|
-      load_room(caller).join("\n").scan(/^\(@\)([^\n]+)/m).each do |procedure|
+      load_room(caller).join("\n").scan(/^\(@\)(\d+)$/m).each do |procedure|
         procedure_calls << ProcedureCall.new(caller, procedure.first.to_i)
       end
     end
@@ -128,7 +127,7 @@ class TimedJumpCoordinator
   def find_all_decalls
     decalls = []
     @room_loader.all_room_numbers.each do |origin|
-      load_room(origin).join("\n").scan(/^\{\}([^\n]+)\n([^\n]+)/m).each do |delay, target|
+      load_room(origin).join("\n").scan(/^\(@\)(\d+) om (\d+) ...$/m).each do |target, delay|
         decalls << Decall.new(target.to_i, delay.to_i, origin)
       end
     end
@@ -137,30 +136,30 @@ class TimedJumpCoordinator
 
   class Decall
     attr_reader :target, :delay, :origin, :executers
-    
+
     def initialize(target, delay, origin)
       @target = target
       @delay = delay
       @origin = origin
       @executers = []
     end
-    
+
     def add_executer(executer)
       @executers << executer
     end
-    
+
     # def to_s
     #   "<Decall: Call #{target} after #{delay} steps from #{origin}>"
     # end
-    
+
   end
 
   def room_references_in(number)
     room = load_room(number)
-    room.map! { |line| line =~ /^\(@\)(\d+)/ ? room_without_alternatives($1) : line }
+    room.map! { |line| line =~ /^\(@\)(\d+)$/ ? room_without_alternatives($1) : line }
     room.flatten! # adding procedure calls to room body
     joined = room.join("\n")
-    my_jumps = (joined.scan(/^@(\d+)/m) + joined.scan(/^\[@\](\d+)/m) + joined.scan(/^\[X\][^\n]+\n(\d+)/m)).flatten
+    my_jumps = (joined.scan(/^@(\d+)/m)).flatten
     my_alternatives = references_in_alternatives_in(room)
     other_alternatives = joined.scan(/^\{@\}(\d+)/m).map { |number| references_in_alternatives_in(load_room(number.first)) }
     (my_jumps + my_alternatives + other_alternatives).flatten.map { |s| s.to_i }
@@ -169,12 +168,11 @@ class TimedJumpCoordinator
   def references_in_alternatives_in(room)
     refs = []
     while room.current do
-      if room.current === "-" then
-        alts = room.next.to_i
-        alts.times { room.next; refs << room.next.strip }
-      elsif room.current === "+" then
-        alts = room.next.to_i
-        alts.times { room.next; refs << room.next.strip; room.next }
+      if room.current === "=" then
+        while room.next
+          break if room.current === "}"
+          refs << $1 if room.current =~ /^@(\d+)/
+        end
       end
       room.next
     end
@@ -182,7 +180,11 @@ class TimedJumpCoordinator
   end
 
   def room_without_alternatives(number)
-    load_room(number).select { |line| alternatives_reached ||= line =~ /^(\-|\+)$/; ! alternatives_reached }
+    alternatives_reached = false
+    load_room(number).select do |line|
+      alternatives_reached ||= line == '='
+      !alternatives_reached
+    end
   end
 
   def load_room(number)

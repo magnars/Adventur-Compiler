@@ -38,14 +38,14 @@
 ** DONE conditional_command.rb
 ** DONE command_bundle.rb -> if_statement.rb
 ** TODO sentence_with_variable.rb
-* Commands som gjemmer seg [1/5]
+* Commands som gjemmer seg [5/5]
 ** DONE Enterpreter.initialize_hashcode_keeper
    Denne har meninger om saved_command_regexp og deed_regexp. Scanner alle
    filene for disse.
-** TODO timed_jump_coordinator lager old-code
-** TODO timed_jump_coordinator scanner etter delayed calls med regexp
-** TODO timed_jump_coordinator finner room_references med regexp
-** TODO timed_jump_coordinator finner romreferanser i alternativer selv
+** DONE timed_jump_coordinator lager old-code
+** DONE timed_jump_coordinator scanner etter delayed calls med regexp
+** DONE timed_jump_coordinator finner room_references med regexp
+** DONE timed_jump_coordinator finner romreferanser i alternativer selv
 * Conditionals [4/4]
 ** DONE Port fra intelliadv
 ** DONE visit count
