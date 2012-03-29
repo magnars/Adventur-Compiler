@@ -38,8 +38,8 @@
 ** DONE conditional_command.rb
 ** DONE command_bundle.rb -> if_statement.rb
 ** TODO sentence_with_variable.rb
-* Commands som gjemmer seg [0/5]
-** TODO Enterpreter.initialize_hashcode_keeper
+* Commands som gjemmer seg [1/5]
+** DONE Enterpreter.initialize_hashcode_keeper
    Denne har meninger om saved_command_regexp og deed_regexp. Scanner alle
    filene for disse.
 ** TODO timed_jump_coordinator lager old-code

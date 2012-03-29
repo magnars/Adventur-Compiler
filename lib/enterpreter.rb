@@ -115,12 +115,12 @@ class Enterpreter
   def initialize_hashcode_keeper
     filename = "#{File.dirname(__FILE__)}/../resources/hashcodefile.txt"
     keeper = HashcodeKeeper.new IO.readlines(filename)
-    saved_command_regexp = /^\]C\[([^\n]+)\n([^\n]+)/m
-    deed_regexp = /^(---|\+\+\+)[^\n]*\n([^\n]+)/m
+    saved_command_regexp = /^([^\n ]+) => ([^\n]+)$/
+    deed_regexp = /^(:snill|:slem) => ([^\n]+)$/
     @room_loader.all_room_numbers.each do |number|
       room_contents = @room_loader.get(number).join("\n")
       room_contents.scan(saved_command_regexp).each {|key, command| keeper.add(key, command) }
-      room_contents.scan(deed_regexp).each { |type, description| keeper.add((type === "---" ? "_EVIL_DEED" : "_GOOD_DEED"), description) }
+      room_contents.scan(deed_regexp).each { |type, description| keeper.add((type === ":slem" ? "_EVIL_DEED" : "_GOOD_DEED"), description) }
     end
     keeper.save(filename)
     keeper

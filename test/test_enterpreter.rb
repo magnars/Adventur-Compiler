@@ -47,7 +47,7 @@ class EnterpreterTestCase < Test::Unit::TestCase
 
   def test_should_find_all_unqiue_lines_for_a_C_command
     @room_loader.expects(:all_room_numbers).returns([1]).times(1)
-    mock_room(["line1", "]C[TEST", "contents", "line2"])
+    mock_room(["line1", "TEST => contents", "line2"])
     @hashcode_keeper.expects(:add).with("TEST", "contents")
     @hashcode_keeper.expects(:save)
     assert_equal @hashcode_keeper, @enterpreter.hashcode_keeper
@@ -56,7 +56,7 @@ class EnterpreterTestCase < Test::Unit::TestCase
 
   def test_should_find_multiple_C_command_lines_in_one_room
     @room_loader.expects(:all_room_numbers).returns([1])
-    mock_room(["line1", "]C[TEST", "contents", "line2", "]C[TEST", "contents2", "line3"])
+    mock_room(["line1", "TEST => contents", "line2", "TEST => contents2", "line3"])
     @hashcode_keeper.expects(:save)
     assert_equal @hashcode_keeper, @enterpreter.hashcode_keeper
     assert_equal 2, (list = @hashcode_keeper.contentlist_for("TEST")).size
@@ -66,7 +66,7 @@ class EnterpreterTestCase < Test::Unit::TestCase
 
   def test_should_find_good_and_evil_deeds
     @room_loader.expects(:all_room_numbers).returns([1])
-    mock_room(["Hei", "---", '"Slemt altså"', "Hallo", "+++", "Snilt også", "+++", "Mer snilt", "+++", "Mer snilt", "Hadet"])
+    mock_room(["Hei", ':slem => "Slemt altså"', "Hallo", ":snill => Snilt også", ":snill => Mer snilt", ":snill => Mer snilt", "Hadet"])
     @hashcode_keeper.expects(:save)
     assert_equal @hashcode_keeper, @enterpreter.hashcode_keeper
     assert_equal 1, (list = @hashcode_keeper.contentlist_for("_EVIL_DEED")).size
@@ -77,9 +77,9 @@ class EnterpreterTestCase < Test::Unit::TestCase
   end
 
   def test_should_not_change_original_line
-    room = ['()KARDEMOMME'].extend(Room)
+    room = ['++ KARDEMOMME'].extend(Room)
     @enterpreter.current_command(room)
-    assert_equal('()KARDEMOMME', room.first)
+    assert_equal('++ KARDEMOMME', room.first)
   end
 
   private
