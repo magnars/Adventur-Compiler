@@ -90,8 +90,8 @@
 
 ** DONE Conditional.parse i conditional_goto + both_conditions
 ** DONE CondTree.parse av $VALUE == 12
-* Ekstra problemer [1/4]
-** TODO Hashcoding av Saved Commands vil bli helt feil.
+* Ekstra problemer [2/4]
+** DONE Hashcoding av Saved Commands vil bli helt feil.
    Løsningen er å manuelt endre oppslagene i hashcodefile
 ** TODO :tidshopp +1 går til en kommando ->add_timejump(); ... trenger params
 ** DONE den gamle løsningen har significant whitespace.
