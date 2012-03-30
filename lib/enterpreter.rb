@@ -35,33 +35,33 @@ class Enterpreter
 
   def self.command_types
     [
-      SaveCommand,
-      RunSavedCommand,
-      GotoRoom,
-      ConditionalGoto,
-      ProcedureCall,
-      CountVisits,
-      AssignToVariable,
-      AlternativesFromOther,
-      Alternatives,
-      RemoveAlternatives,
-      ReinstateAlternatives,
-      IfStatement,
-      ConditionalCommand,
-      RemoveFlag, AddFlag,
-      AddKongerupi,
-      ActivateSaving,
-      UnfinishedStory,
-      Unreachable,
-      DramaticPause,
-      IncreaseBodycount,
-      SummarizeDeeds,
-      RegisterDelayedCall,
-      AddTimejump,
-      AddDeed,
-      EndParagraph,
-      SentenceWithVariable,
-      PlainText
+     SaveCommand,
+     RunSavedCommand,
+     GotoRoom,
+     ConditionalGoto,
+     ProcedureCall,
+     CountVisits,
+     AssignToVariable,
+     AlternativesFromOther,
+     Alternatives,
+     RemoveAlternatives,
+     ReinstateAlternatives,
+     IfStatement,
+     ConditionalCommand,
+     RemoveFlag, AddFlag,
+     AddKongerupi,
+     ActivateSaving,
+     UnfinishedStory,
+     Unreachable,
+     DramaticPause,
+     IncreaseBodycount,
+     SummarizeDeeds,
+     RegisterDelayedCall,
+     AddTimejump,
+     AddDeed,
+     EndParagraph,
+     SentenceWithVariable,
+     PlainText
     ]
   end
 
@@ -85,8 +85,24 @@ class Enterpreter
   end
 
   def current_command(room)
-    self.class.command_types.inject(false) do |command, type|
-      command = type.parse?(room.current.clone, room, self) and break command
+    prevl = room.index == 0 ? "<bof>" : room[room.index-1]
+    line = room.current
+    nextl = room.peek or "<eof>"
+    begin
+      self.class.command_types.inject(false) do |command, type|
+        command = type.parse?(room.current.clone, room, self) and break command
+      end
+    rescue
+      raise ["",
+             "--------------------------------------------------------------",
+             " Error while parsing in room #{room.number}:",
+             " Stumbled on line:",
+             "     #{prevl}",
+             " --> #{line}",
+             "     #{nextl}",
+             " Message: #{$!}",
+             "--------------------------------------------------------------"
+            ].join("\n")
     end
   end
 

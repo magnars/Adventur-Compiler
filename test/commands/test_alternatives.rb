@@ -15,7 +15,19 @@ class CommandsAlternativesTestCase < Test::Unit::TestCase
   end
 
   def test_should_parse_alternatives
-    room = ["=", "Alternative 1", "@123", "", "Alternative 2", "@234"].extend(Room)
+    room = ["=", "Alternative 1", "@123", "Alternative 2", "@234"].extend(Room)
+    alternatives = Alternatives.parse?(room.current, room, @enterpreter)
+    assert_equal(expected_code_for_alternatives, alternatives.code)
+  end
+
+  def test_should_allow_blank_lines
+    room = ["=", "Alternative 1", "@123", "", "Alternative 2", "@234", ""].extend(Room)
+    alternatives = Alternatives.parse?(room.current, room, @enterpreter)
+    assert_equal(expected_code_for_alternatives, alternatives.code)
+  end
+
+  def test_should_quit_when_reaching_block_end
+    room = ["=", "Alternative 1", "@123", "", "Alternative 2", "@234", "", "}", "more stuff"].extend(Room)
     alternatives = Alternatives.parse?(room.current, room, @enterpreter)
     assert_equal(expected_code_for_alternatives, alternatives.code)
   end

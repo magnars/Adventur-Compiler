@@ -12,7 +12,7 @@ class Alternatives
       room_loader = enterpreter.room_loader
       alternatives = []
 
-      while room.peek
+      while room.peek and room.peek != "}"
         alternatives << parse_alternative(room)
       end
 

@@ -22,7 +22,16 @@ class Conditional
   end
 
   def self.parse(string, room_number)
-    build(CondTree.parse(string), room_number)
+    begin
+      build(CondTree.parse(string), room_number)
+    rescue
+      raise ["",
+             "--------------------------------------------------------------",
+             " Error while parsing in room #{room_number}:",
+             " Message: #{$!}",
+             "--------------------------------------------------------------"
+            ].join("\n")
+    end
   end
 
   def self.build(node, room_number = 0)
