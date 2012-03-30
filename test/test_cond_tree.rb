@@ -95,6 +95,7 @@ class CondTreeTestCase < Test::Unit::TestCase
     assert_equal("$TIDSPUNKT > 2 + $HØRTE_SISTE_RYKTE", CondTree.parse("$TIDSPUNKT > 2 + $HØRTE_SISTE_RYKTE"))
     assert_equal("$TIDSPUNKT > $HØRTE_SISTE_RYKTE + 2", CondTree.parse("$TIDSPUNKT > $HØRTE_SISTE_RYKTE + 2"))
     assert_equal("$VALUE + 7 >= 12", CondTree.parse("$VALUE + 7 >= 12"))
+    assert_equal("$TIDSPUNKT - $VENTELISTE_FOR_BODPLASS >= 40", CondTree.parse("$TIDSPUNKT - $VENTELISTE_FOR_BODPLASS >= 40"))
   end
 
   def test_parse_and_more
