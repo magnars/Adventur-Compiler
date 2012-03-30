@@ -33,10 +33,10 @@ class Alternatives
       text = "#{text} #{room.next}"
     end
     details = room.next
-    if details =~ /^ *@(\d+)$/
+    if details =~ /^ *@(-?\d+)$/
       room_number = $1
       condition = "-"
-    elsif details =~ /^ *@(\d+) \? (.+)$/
+    elsif details =~ /^ *@(-?\d+) \? (.+)$/
       room_number = $1
       condition = $2
     else

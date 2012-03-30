@@ -60,6 +60,12 @@ class CommandsAlternativesTestCase < Test::Unit::TestCase
     assert_equal(expected_code_for_alternatives, Alternatives.parse?(room.current, room, @enterpreter).code)
   end
 
+  def test_should_not_include_alternatives_to_nonexistant_rooms
+    room = ["=", "Alternative 1", "@123", "Nonexitant room alt", "@-1", "Alternative 2", "@234"].extend(Room)
+    @room_loader.stubs(:room_exists?).returns(true, false, true).then.raises("too many calls to room_exists")
+    assert_equal(expected_code_for_alternatives, Alternatives.parse?(room.current, room, @enterpreter).code)
+  end
+
   def test_should_insert_player_name_in_alternative_text
     room = ['=', 'My name is <navn>!', '@123'].extend(Room)
     assert_equal(expected_code_for_name_in_alternatives, Alternatives.parse?(room.current, room, @enterpreter).code)
