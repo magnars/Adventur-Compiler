@@ -35,6 +35,12 @@ class CondTreeTestCase < Test::Unit::TestCase
                  CondTree.parse("både $SAMUELSEN == 1 og HØRER-VÅPENHUS"))
   end
 
+  def test_parse_all_with_nr_and_kr
+    assert_equal([:all, "nr10825", "kr.19"],
+                 CondTree.parse("både nr10825 og kr.19"))
+  end
+
+
   def test_parse_some
     assert_equal([:some, "TØY1", "TØY2", "*1*"],
                  CondTree.parse("enten TØY1, TØY2 eller 2. alternativ"))
