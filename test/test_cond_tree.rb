@@ -26,9 +26,19 @@ class CondTreeTestCase < Test::Unit::TestCase
                  CondTree.parse("både TØY1, TØY2 og 2. alternativ"))
   end
 
+  def test_parse_all_with_expressions
+    assert_equal([:all, "$SAMUELSEN == 1", "HØRER-VÅPENHUS"],
+                 CondTree.parse("både $SAMUELSEN == 1 og HØRER-VÅPENHUS"))
+  end
+
   def test_parse_some
     assert_equal([:some, "TØY1", "TØY2", "*1*"],
                  CondTree.parse("enten TØY1, TØY2 eller 2. alternativ"))
+  end
+
+  def test_parse_some_with_expressions
+    assert_equal([:some, "$SAMUELSEN == 1", "HØRER-VÅPENHUS"],
+                 CondTree.parse("enten $SAMUELSEN == 1 eller HØRER-VÅPENHUS"))
   end
 
   def test_strip_parens
