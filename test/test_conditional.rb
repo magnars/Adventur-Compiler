@@ -90,7 +90,7 @@ class ConditionalTestCase < Test::Unit::TestCase
 
   def test_should_parse_visits
     assert_equal('$this->receiver->get_detail("\$_VISITS_TO_453") == 3',
-                 Conditional.build("3. besøk", 453).code)
+                 Conditional.build("_BESØK_3", 453).code)
   end
 
 

@@ -2,16 +2,17 @@ require 'enterpreter'
 require 'room_loader'
 
 class Page
-  
+
   def initialize(starting_room, room_loader, timed_jump_coordinator)
     @starting_room = starting_room
     begin
       @code = Enterpreter.new(starting_room, room_loader, timed_jump_coordinator).enterpret
     rescue
       raise [
+        "",
         "--------------------------------------------------------------",
         " Error while initializing page from room #{@starting_room}!",
-        " Message: #{$!}", 
+        " Message: #{$!}",
         " Last loaded room number: #{RoomLoader.last_loaded_room_number}",
         "--------------------------------------------------------------"
         ].join("\n")
@@ -21,17 +22,17 @@ class Page
   def identifier
     "#{@starting_room}_#{@code.hash}"
   end
-  
+
   def code
     code_skeleton.sub(":CODE:", indented_code).sub(":IDENTIFIER:", identifier)
   end
-  
+
   def indented_code
     @code.map { |line| "  #{line}" }.join
   end
-  
+
   private
-  
+
   def code_skeleton
     <<-CODE
 <?php
@@ -45,5 +46,5 @@ class PageInstance {
 ?>
 CODE
   end
-  
+
 end

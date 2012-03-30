@@ -293,7 +293,7 @@ end
 
 class VisitConditional
   def self.parse?(node, room_number)
-    if node =~ /^(\d+)\. besøk$/ then
+    if node =~ /^_BESØK_(\d+)$/ then
       ValueConditional.new "$_VISITS_TO_#{room_number}", "==", $1
     else
       false

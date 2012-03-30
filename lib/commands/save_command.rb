@@ -4,7 +4,7 @@ class SaveCommand
     @name, @contents, @contents_hash = name, contents, hashcode_keeper.code_for(name, contents)
   end
 
-  def self.parse?(line, room, enterpreter = nil)
+  def self.parse?(line, room = nil, enterpreter = nil)
     if line =~ /^([A-ZÆØÅ_.-]+) => (.+)$/
       new $1, $2, enterpreter.hashcode_keeper
     else

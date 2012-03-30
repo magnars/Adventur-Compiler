@@ -3,7 +3,17 @@ require "conditional"
 
 class CondTree
   def self.parse(s)
-    strip_out_containers(req_parse(replace_with_oldies(s), [:container]))
+    begin
+      strip_out_containers(req_parse(replace_with_oldies(s), [:container]))
+    rescue
+      raise ["",
+             "--------------------------------------------------------------",
+             " Error while parsing this string:",
+             s,
+             " Message: #{$!}",
+             "--------------------------------------------------------------"
+            ].join("\n")
+    end
   end
 
   def self.cons(el, list)
@@ -108,6 +118,7 @@ class CondTree
   def self.replace_with_oldies(s)
     s = replace_with_old_date(s)
     s = replace_with_old_alt_req(s)
+    s = replace_with_old_visits(s)
     replace_neither(s)
   end
 
@@ -122,6 +133,10 @@ class CondTree
 
   def self.replace_with_old_date(s)
     s.gsub(/den (\d\d)\/(\d\d)/) { "DATO#{$1}#{$2}" }
+  end
+
+  def self.replace_with_old_visits(s)
+    s.gsub(/(\d+)\. besøk/) { "_BESØK_#{$1}" }
   end
 
   def self.get_some(s)

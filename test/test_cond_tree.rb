@@ -16,6 +16,10 @@ class CondTreeTestCase < Test::Unit::TestCase
     assert_equal("DATO2412", CondTree.parse("den 24/12"))
   end
 
+  def test_replace_with_oldies
+    assert_equal("_BESØK_3", CondTree.parse("3. besøk"))
+  end
+
   def test_parse_all_two
     assert_equal([:all, "TØY", "DATO0412"],
                  CondTree.parse("både TØY og den 04/12"))
