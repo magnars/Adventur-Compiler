@@ -35,6 +35,8 @@ class Enterpreter
 
   def self.command_types
     [
+     ConditionalCommand, # important that this is first, to always ensure inline ? tests are parsed correctly
+     IfStatement,
      SaveCommand,
      RunSavedCommand,
      GotoRoom,
@@ -46,9 +48,8 @@ class Enterpreter
      Alternatives,
      RemoveAlternatives,
      ReinstateAlternatives,
-     IfStatement,
-     ConditionalCommand,
-     RemoveFlag, AddFlag,
+     RemoveFlag,
+     AddFlag,
      AddKongerupi,
      ActivateSaving,
      UnfinishedStory,
