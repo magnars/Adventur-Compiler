@@ -28,7 +28,7 @@ class EnterpreterTestCase < Test::Unit::TestCase
   end
 
   def test_should_properly_indent_multiline_code_from_commands
-    mock_room(["line1", "line2 ? TEST", "line3"])
+    mock_room(["line1", "line2 ?? TEST", "line3"])
     assert_equal(expected_code_for_conditional, @enterpreter.enterpret)
   end
 

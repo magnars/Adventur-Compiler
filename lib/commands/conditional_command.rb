@@ -8,7 +8,7 @@ class ConditionalCommand
   end
 
   def self.parse?(line, room, enterpreter)
-    if line.sub!(/ \? (.+)/, "")
+    if line.sub!(/ \?\? (.+)/, "")
       conditional = Conditional.parse($1, room.number)
       room[room.index] = line # replace with non-conditional before enterpreting again
       new(conditional, enterpreter.current_command(room))
