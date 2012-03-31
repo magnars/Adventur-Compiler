@@ -7,6 +7,7 @@ class CondTreeTestCase < Test::Unit::TestCase
   def test_parse_flags
     assert_equal("BØLLE", CondTree.parse("BØLLE"))
     assert_equal("AKTIVT_RYKTE:HUSKER_I_TREET", CondTree.parse("AKTIVT_RYKTE:HUSKER_I_TREET"))
+    assert_equal("]C[TEST", CondTree.parse("]C[TEST"))
   end
 
   def test_parse_nots
